@@ -1,0 +1,11 @@
+//Sizing shortcut
+
+//rect
+@mixin size($width,$height){
+    width: $width;
+    height: $height;
+}
+//square
+@mixin square($size){
+    @include  size($size,$size);
+}

@@ -1,0 +1,284 @@
+@charset "utf-8";
+
+/****************详情页面  tabs风格样式*******************/
+//详情页面样式  实有人口 | 实有房屋  |标准地址 | 实有单位
+
+//详情主面板样式
+.info-main {
+    @extend .main;
+    height: auto;
+    @include clearfix;
+    .base-info {
+        @include clearfix;
+        height: auto;
+        padding-bottom: 40px;
+        .photo-info {
+            float: left;
+            @include size(185px,300px);
+            position: relative;
+            .img-div {
+                margin: 25px;
+                border: 1px colors(borderColor) solid;
+                img {
+                    @include size(133px,165px);
+                }
+            }
+            .edit-div {
+                @include positionDisplay;
+                top: 220px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .person-info {
+            float: left;
+            width: 1012px;
+            height: auto;
+            margin-top: 25px;
+            position: relative;
+            .title {
+                @include clearfix;
+                width: 100%;
+                .name-info {
+                    float: left;
+                    margin-top: 10px;
+                    .name {
+                        font-size: fontSize(h3);
+                    }
+                    .edit{
+                        margin-top: -9px;
+                        width: 35px;
+                        margin-left: 15px;
+                        padding: 2px 5px;
+                    }
+                }
+                .person-btn {
+                    float: right;
+                    margin-right: 30px;
+                }
+            }
+            .person-top-right{
+                position: absolute;
+                right: 25px;
+                top: -25px;
+                color: colors(primary);
+                z-index: 10;
+                @include clearfix;
+                .ywbl{
+                    margin-right: 20px;
+                    float: left;
+                    background: colors(white);
+                    &:hover{
+                        cursor: pointer;
+                        box-shadow: 0 2px 5px #888;
+                    }
+                    &:hover .ywbl-content{
+                        visibility: visible;
+                    }
+                    .ywbl-title{
+                        padding: 0 10px;
+                        line-height: 30px;
+                        @include text-align(right);
+                        .ywbl-title-text{
+                            font-size: 14px;
+                            margin-right:5px;
+                        }
+                    }
+                    .ywbl-content{
+                        visibility: hidden;
+                        p{
+                            @include text-align(right);
+                            margin: 0;
+                            line-height: 30px;
+                            padding: 0 10px;
+                            &:hover{
+                                background: colors(primary);
+                                color: colors(white);
+                            }
+                        }
+                    }
+
+                }
+                .help{
+                    float: left;
+                    line-height: 30px;
+                    cursor: pointer;
+                    span{
+                        margin-left: 5px;
+                    }
+                }
+            }
+            .content {
+                @include clearfix;
+                margin-top: 30px;
+                width: 100%;
+                .item {
+                    float: left;
+                    //width:326px;
+                    margin-right:10px;
+                    min-height: 30px;
+                    line-height:30px;
+                    height:auto;
+                    border-bottom: 1px dashed colors(borderColor);
+                    .pro {
+                        @include inline-block(baseline);
+                        width: 80px;
+                        font-size: fontSize(small);
+                        font-weight: bold;
+                        color: colors(grayBgcolor);
+                        position: relative;
+                        top:3px;
+                        i{
+                            color:colors(red);
+                            margin-right:5px;
+                        }
+                    }
+                    .val {
+                        @extend .pro;
+                        vertical-align: middle;
+                        width: 240px;
+                    }
+                    .clear-border {
+                        border: 1px solid colors(white);
+                    }
+                }
+                //检查周期
+                .item-title{
+                    border-bottom: 1px solid colors(borderColor);
+                    width: 98%;
+                    .pro{
+                        font-weight: bold;
+                        font-size: fontSize(base);
+                        color:colors(black);
+                        margin:10px 0 0;
+                    }
+                }
+            }
+        }
+    }
+    .btn-area{
+        margin: 0 auto 80px;
+        display: none;
+    }
+    .tabs-header{
+        border: none;
+        background: colors(white);
+        .tabs-inner{
+            background: darken(colors(white),10%);
+        }
+    }
+    .tabs-panels{
+        border: none;
+    }
+    .other-info {
+        @include clearfix;
+        height: auto;
+        width: 100%;
+        border: none;
+        .person-add{
+            margin: 20px 0 0;
+            font-size: 12px;
+            width: 35px;
+            padding: 2px 5px;
+        }
+        .title {
+            width: 100%;
+            @include clearfix;
+            .tip {
+                position: relative;
+                left: -10px;
+                float: left;
+                width: 175px;
+                height: 35px;
+                line-height: 35px;
+                text-align: center;
+                background-color: colors(primary);
+                color: colors(white);
+                font-size: fontSize(large);
+                font-family: fontFamily(yh);
+                &:before {
+                    @include triangle(10px, $bgColor, darken(colors(primary), 15%), up-right, false, false);
+                }
+            }
+            .edit-btn {
+                float: right;
+                margin-right: 30px;
+                margin-bottom: 0;
+            }
+        }
+        .content {
+            @include size(auto, auto);
+            margin: 25px auto 40px;
+            //表单样式
+            .form-content{
+                list-style-type: none;
+                margin:0;
+                padding:5px 0;
+                @include clearfix;
+                li{
+                    background-color: #eef1f6;
+                    width:564px;
+                    @include float(left);
+                    line-height: 22px;
+                    min-height:22px;
+                    height:auto;
+                    margin-bottom:10px;
+                    @include clearfix;
+                    label{
+                        cursor: default;
+                        display: inline-block;
+                        width:135px;
+                        margin-right: 15px;
+                        @include float(left);
+                        @include text-align(right);
+                        color: colors(textColor);
+                        font-weight: bold;
+                    }
+                    .textbox{
+                        background: transparent;
+                        border:1px solid #eef1f6;
+                    }
+                    input{
+                        background: transparent;
+                    }
+                }
+                li.li-two:nth-child(2n){
+                    margin-left:20px;
+                }
+                li.li-three{
+                    width:369px;
+                    margin-right:20px!important;
+                }
+                li.li-three:nth-child(3n){
+                    margin-right:0 !important;
+                }
+                li.li-three:nth-child(2n){
+                    margin-left:0!important;
+                }
+                li.li-full{
+                    width:900px;
+                    margin: 0 0 10px!important;
+                }
+            }
+        }
+    }
+    #base_table{
+        margin:0 25px;
+    }
+}
+
+//详情页面  基本信息修改样式
+.info-edit{
+    .base-info {
+        border: none;
+        width:auto;
+        .person-info{
+            margin-left: 40px;
+            .item{
+                span.pro-right{
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+}

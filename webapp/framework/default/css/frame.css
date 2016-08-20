@@ -1,0 +1,536 @@
+@charset "UTF-8";
+/* line 5, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*引入相关方法*/
+/**! 
+ * @author christ
+ * 本配置基于scss框架compass,在运用时请注意是否安装sass,compass
+ */
+/* @media all and (orientation:portrait){ //这是匹配竖屏的状态，竖屏时的css代码
+  @content;
+}
+@media all and (orientation:landscape){ //这是匹配横屏的状态，横屏时的css代码
+  @content;
+} */
+/**
+ * 自定设置百分比 tags_per_width
+ * 实用范围 知道槽间距为margin-right, 子标签左右对齐父元素
+ * @parm $n 没换多少个标签
+ * @parm $gutter 每个标签间的槽距
+ */
+/**
+ * 获取颜色map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取字体map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取层级map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取圆角map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取圆角map方法
+ * @parm $k 颜色的key值
+ */
+/* line 9, ../sass/scjz/common.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 12, ../sass/scjz/_common.scss */
+em, i {
+  font-style: normal;
+}
+
+/* line 16, ../sass/scjz/_common.scss */
+.clearfix {
+  clear: both;
+  content: '';
+}
+
+/*自定义浏览器前缀*/
+/*header*/
+/* line 5, ../sass/scjz/_frame.scss */
+.sc_header {
+  background: #24618c;
+  height: 50px;
+  color: #fff;
+  font-family: "SimSun";
+}
+
+/* line 13, ../sass/scjz/_frame.scss */
+.panel-body {
+  border: 0;
+}
+
+/* line 23, ../sass/scjz/_frame.scss */
+.m-left {
+  float: left;
+  display: inline;
+  line-height: 50px;
+  padding-left: 15px;
+  font-size: 24px;
+  font-family: "Microsoft Yahei", SimSun, Tahoma, arial, SimHei, sans-serif;
+}
+/* line 29, ../sass/scjz/_frame.scss */
+.m-left img {
+  vertical-align: middle;
+}
+
+/* line 34, ../sass/scjz/_frame.scss */
+.m-right {
+  float: right;
+  display: inline;
+}
+
+/*快速操作栏*/
+/* line 39, ../sass/scjz/_frame.scss */
+.quickModel, .menuModel, .userCenterModel {
+  float: left;
+  display: inline;
+  height: 50px;
+  margin-right: 30px;
+}
+/* line 43, ../sass/scjz/_frame.scss */
+.quickModel a, .menuModel a, .userCenterModel a {
+  float: left;
+  display: inline;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  display: block;
+  padding: 0;
+  color: #fff;
+}
+/* line 51, ../sass/scjz/_frame.scss */
+.quickModel a img, .menuModel a img, .userCenterModel a img {
+  vertical-align: middle;
+}
+/* line 54, ../sass/scjz/_frame.scss */
+.quickModel a:hover img, .menuModel a:hover img, .userCenterModel a:hover img {
+  opacity: 0.8;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+}
+
+/* line 65, ../sass/scjz/_frame.scss */
+.menuModel a {
+  text-decoration: none;
+  width: auto;
+}
+/* line 68, ../sass/scjz/_frame.scss */
+.menuModel a span {
+  font-size: 12px;
+  height: 32px;
+  margin: 14px 0 0 5px;
+  line-height: 1.1;
+  display: inline-block;
+}
+/* line 75, ../sass/scjz/_frame.scss */
+.menuModel a img {
+  vertical-align: -2px;
+}
+
+/* line 82, ../sass/scjz/_frame.scss */
+.userCenterModel {
+  font-size: 12px;
+}
+/* line 85, ../sass/scjz/_frame.scss */
+.userCenterModel .userHead, .userCenterModel .userInfo {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  float: left;
+  display: inline;
+}
+/* line 91, ../sass/scjz/_frame.scss */
+.userCenterModel .userHead img, .userCenterModel .userInfo img {
+  vertical-align: middle;
+  border-radius: 100%;
+  border: 3px solid #fff;
+}
+/* line 97, ../sass/scjz/_frame.scss */
+.userCenterModel .userInfo {
+  margin-left: 5px;
+  width: auto;
+  line-height: 1.5;
+}
+/* line 102, ../sass/scjz/_frame.scss */
+.userCenterModel .userInfo div {
+  height: 25px;
+  text-align: left;
+}
+/* line 105, ../sass/scjz/_frame.scss */
+.userCenterModel .userInfo div span {
+  cursor: pointer;
+}
+/* line 108, ../sass/scjz/_frame.scss */
+.userCenterModel .userInfo div .change {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: normal;
+  float: none;
+  color: #ffe87b;
+}
+/* line 117, ../sass/scjz/_frame.scss */
+.userCenterModel .userInfo .userName {
+  line-height: 30px;
+}
+/* line 120, ../sass/scjz/_frame.scss */
+.userCenterModel .userInfo .userZone {
+  line-height: 20px;
+}
+
+/* line 127, ../sass/scjz/_frame.scss */
+.loginOut {
+  float: left;
+  display: inline;
+  height: 50px;
+  margin-right: 15px;
+}
+/* line 131, ../sass/scjz/_frame.scss */
+.loginOut a {
+  text-align: center;
+  color: #fff;
+  display: block;
+  padding-top: 8px;
+}
+/* line 136, ../sass/scjz/_frame.scss */
+.loginOut a span {
+  display: block;
+  font-size: 12px;
+}
+
+/*用户中心*/
+/* line 145, ../sass/scjz/_frame.scss */
+.activeWin {
+  display: block;
+  width: 10%;
+}
+
+/* line 149, ../sass/scjz/_frame.scss */
+.branchChange {
+  background: url("../images/menu_bg2.png");
+  max-height: 400px;
+  overflow-y: auto;
+  position: absolute;
+  z-index: 1100;
+  display: none;
+}
+/* line 156, ../sass/scjz/_frame.scss */
+.branchChange a {
+  display: block;
+  padding: 10px;
+  color: #000;
+  font-size: 12px;
+}
+/* line 161, ../sass/scjz/_frame.scss */
+.branchChange a:hover {
+  background: url("../images/menu_bg1.png");
+  color: #fff;
+}
+
+/* line 167, ../sass/scjz/_frame.scss */
+.menuNavWin {
+  width: 350px;
+  height: 590px;
+  overflow-y: auto;
+  position: absolute;
+  z-index: 1100;
+  display: none;
+}
+/* line 174, ../sass/scjz/_frame.scss */
+.menuNavWin .menuUl {
+  width: 150px;
+  height: 520px;
+  background: url("../images/menu_bg1.png");
+  position: absolute;
+  right: 0;
+}
+/* line 180, ../sass/scjz/_frame.scss */
+.menuNavWin .menuUl li {
+  width: 90%;
+  border-radius: 0 3px 3px 0;
+}
+/* line 183, ../sass/scjz/_frame.scss */
+.menuNavWin .menuUl li a {
+  font-family: "Microsoft Yahei", SimSun, Tahoma, arial, SimHei, sans-serif;
+  padding: 7px 0 7px 15px;
+  display: block;
+  color: #fff;
+  font-size: 14px;
+}
+/* line 190, ../sass/scjz/_frame.scss */
+.menuNavWin .menuUl li .liListAll {
+  width: 200px;
+  height: 520px;
+  display: none;
+  background: url("../images/menu_bg2.png");
+  position: absolute;
+  overflow-y: auto;
+  left: -200px;
+  top: 0;
+}
+/* line 199, ../sass/scjz/_frame.scss */
+.menuNavWin .menuUl li .liListAll a {
+  font-family: "SimSun";
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: #000;
+  padding: 10px 0 10px 30px;
+}
+/* line 207, ../sass/scjz/_frame.scss */
+.menuNavWin .menuUl li .liListAll a:hover {
+  background: url("../images/menu_bg1.png");
+  color: #fff;
+}
+/* line 212, ../sass/scjz/_frame.scss */
+.menuNavWin .menuUl li .liListAll .first-a {
+  margin-top: 10px;
+}
+/* line 216, ../sass/scjz/_frame.scss */
+.menuNavWin .menuUl li .liListAll-active {
+  display: block;
+}
+/* line 219, ../sass/scjz/_frame.scss */
+.menuNavWin .menuUl li:hover {
+  background: url("../images/menu_bg2.png");
+}
+/* line 221, ../sass/scjz/_frame.scss */
+.menuNavWin .menuUl li:hover .listTitle {
+  color: #0f6596 !important;
+}
+/* line 226, ../sass/scjz/_frame.scss */
+.menuNavWin .menuUl .li-first {
+  margin-top: 10px;
+}
+/* line 229, ../sass/scjz/_frame.scss */
+.menuNavWin .menuUl .li-active {
+  background: url("../images/menu_bg2.png");
+}
+/* line 231, ../sass/scjz/_frame.scss */
+.menuNavWin .menuUl .li-active .listTitle {
+  color: #0f6596 !important;
+}
+/* line 236, ../sass/scjz/_frame.scss */
+.menuNavWin .iptBox {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+}
+/* line 241, ../sass/scjz/_frame.scss */
+.menuNavWin .iptBox .ipt-l {
+  float: left;
+  display: inline;
+  width: 200px;
+  height: 100%;
+  background: url("../images/menu_bg2.png");
+}
+/* line 247, ../sass/scjz/_frame.scss */
+.menuNavWin .iptBox .ipt-r {
+  float: left;
+  display: inline;
+  width: 150px;
+  height: 100%;
+  background: url("../images/menu_bg1.png");
+}
+/* line 253, ../sass/scjz/_frame.scss */
+.menuNavWin .iptBox .ipt-container {
+  position: absolute;
+  top: 10px;
+  height: 35px;
+  line-height: 35px;
+  width: 100%;
+  z-index: 3;
+}
+/* line 260, ../sass/scjz/_frame.scss */
+.menuNavWin .iptBox .ipt-container div {
+  width: 80%;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background: #fff;
+  margin: 0 auto;
+  color: #5a5a5a;
+}
+/* line 266, ../sass/scjz/_frame.scss */
+.menuNavWin .iptBox .ipt-container div input {
+  width: 75%;
+  border: 0;
+  outline: none;
+  padding-left: 15px;
+}
+/* line 272, ../sass/scjz/_frame.scss */
+.menuNavWin .iptBox .ipt-container div i {
+  cursor: pointer;
+  padding: 5px;
+}
+/* line 279, ../sass/scjz/_frame.scss */
+.menuNavWin #searchBox {
+  width: 350px;
+  height: 590px;
+  background: #000000;
+  position: absolute;
+  top: 0;
+  background: url("../images/menu_bg2.png");
+  display: none;
+}
+/* line 287, ../sass/scjz/_frame.scss */
+.menuNavWin #searchBox ul {
+  height: 520px;
+  overflow-y: auto;
+}
+/* line 291, ../sass/scjz/_frame.scss */
+.menuNavWin #searchBox ul li .titleSpan {
+  background: url("../images/menu_bg1.png");
+  display: block;
+  padding: 10px 30px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+/* line 298, ../sass/scjz/_frame.scss */
+.menuNavWin #searchBox ul li .titleSpan i {
+  margin-right: 15px;
+}
+/* line 302, ../sass/scjz/_frame.scss */
+.menuNavWin #searchBox ul li a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: #000;
+  display: block;
+  padding: 10px 30px;
+}
+/* line 310, ../sass/scjz/_frame.scss */
+.menuNavWin #searchBox ul li a:hover {
+  background: url("../images/menu_bg1.png");
+  color: #fff;
+}
+
+/* line 321, ../sass/scjz/_frame.scss */
+.panel-body {
+  background: none;
+}
+
+/* line 324, ../sass/scjz/_frame.scss */
+.panel > div.panel-body {
+  overflow: hidden;
+}
+
+/* line 329, ../sass/scjz/_frame.scss */
+.indexPage {
+  background: url("../images/bgi_1.jpg");
+  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+  -webkit-background-size: 100% 100%;
+  -ms-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+
+/* line 337, ../sass/scjz/_frame.scss */
+#loadingMsk {
+  font-family: "SimSun";
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+}
+/* line 346, ../sass/scjz/_frame.scss */
+#loadingMsk .loadingPage {
+  background: #fff;
+  text-align: center;
+  width: 300px;
+  height: 100px;
+  line-height: 100px;
+  position: absolute;
+  left: 50%;
+  margin-left: -150px;
+  top: 50%;
+  margin-top: -50px;
+}
+/* line 357, ../sass/scjz/_frame.scss */
+#loadingMsk .loadingPage img {
+  vertical-align: middle;
+}

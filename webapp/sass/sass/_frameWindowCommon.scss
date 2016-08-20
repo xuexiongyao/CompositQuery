@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+/******************弹出iframe(url)窗口公共样式*********************/
+
+.frame-window{
+    margin: 30px auto 0;
+    padding-bottom: 30px;
+    height:auto;
+    width:100%;
+    background: colors(white);
+    .frame-window-con{
+        width : 100%;
+        margin: 40px auto 0;
+        font-size: fontSize(small);
+        @include clearfix;
+        .item{
+            margin: 10px 0 0;
+            @include float(left);
+        }
+        .pro{
+            @include inline-block(top);
+            @include text-align(right);
+            margin-right:20px;
+            width:100px;
+            color:colors(textColor);
+            font-weight:bold;
+            i{
+                color: colors(red);
+                margin-right:5px;
+            }
+        }
+    }
+    .frame-window-btn{
+        width:100%;
+        margin:10px 0;
+        @include text-align(center);
+        a.easyui-linkbutton{
+            margin:0 10px;
+        }
+    }
+}

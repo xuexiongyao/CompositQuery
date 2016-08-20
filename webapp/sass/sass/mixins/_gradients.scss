@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+//gradient
+@mixin gradients($attr,$fx,$startColor,$endColor){
+    /*IE5-9*/
+    @if $lte8{
+        $gradientType: 0 !default;//默认值纵向渐变 $gradientType只有两个值(0|1)
+        @if $fx == top{
+            $gradientType: 0;
+            filter:alpha(opacity=100 finishopacity=100 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#{$startColor},endcolorstr=#{$endColor},gradientType= #{$gradientType});
+            -ms-filter:alpha(opacity=100 finishopacity=100 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#{$startColor},endcolorstr=#{$endColor},gradientType= #{$gradientType});
+        }@else if $fx == left {
+            $gradientType: 1;
+            filter:alpha(opacity=100 finishopacity=100 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#{$startColor},endcolorstr=#{$endColor},gradientType= #{$gradientType});
+            -ms-filter:alpha(opacity=100 finishopacity=100 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#{$startColor},endcolorstr=#{$endColor},gradientType= #{$gradientType});
+        }@else {
+            filter:alpha(opacity=100 finishopacity=100 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#{$startColor},endcolorstr=#{$endColor},gradientType= #{$gradientType});
+            -ms-filter:alpha(opacity=100 finishopacity=100 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#{$startColor},endcolorstr=#{$endColor},gradientType= #{$gradientType});
+        }
+    }
+    /* 一些不支持背景渐变的浏览器 */
+    #{$attr}:$startColor;
+    #{$attr}:-moz-linear-gradient($fx, $startColor,$endColor);
+    #{$attr}:-webkit-linear-gradient($fx,$startColor,$endColor);
+    #{$attr}:-o-linear-gradient($fx, $startColor, $endColor);
+    #{$attr}:-ms-linear-gradient($fx, $startColor, $endColor);
+}

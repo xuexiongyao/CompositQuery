@@ -1,0 +1,1220 @@
+@charset "UTF-8";
+/***********************************/
+/**
+ * 获取颜色map方法
+ * @param $key 颜色的key值
+ */
+/**
+ * 获取字体map方法
+ * @param $key 颜色的key值
+ */
+/**
+ * 获取字体大小map方法
+ * @param $key 颜色的key值
+ */
+/**
+ * 获取行高map方法
+ * @param $key 颜色的key值
+ */
+/**
+ * 获取圆角map方法
+ * @param $key 颜色的key值
+ */
+/**
+ * 获取z-index map方法
+ * @param $key 颜色的key值
+ */
+/**!
+ * @author christ
+ * 本配置基于sass框架compass,在运用时请注意是否安装sass,compass
+ */
+/*按钮移入渐变*/
+/*disabled btn*/
+/*selected button*/
+/* line 5, ../sass/sass/mixins/_scroll.scss */
+::-webkit-scrollbar {
+  background-color: #fff;
+  width: 5px;
+  height: 10px;
+}
+
+/* line 11, ../sass/sass/mixins/_scroll.scss */
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+/* line 15, ../sass/sass/mixins/_scroll.scss */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.65);
+}
+
+/* line 14, ../sass/sass/mixins/_triangle.scss */
+.info-main .other-info .title .tip:before, .info-main .other-info #logout_panel .living-info .living-table-div .tip:before, #logout_panel .living-info .info-main .other-info .living-table-div .tip:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+}
+
+/***********************************/
+/**************主页面框架样式*******************/
+/* line 6, ../sass/sass/_base.scss */
+.main, .query-list-main, .add-main, .info-main {
+  margin: 30px auto 0;
+  padding: 1px 0 30px;
+  width: 1198px;
+  height: auto;
+  background-color: #fff;
+}
+
+/* line 16, ../sass/sass/_base.scss */
+.address-more {
+  width: 100%;
+  height: 15px;
+  line-height: 15px;
+  text-align: center;
+  cursor: pointer;
+  color: #0e6595;
+  font-size: 14px;
+  font-weight: bold;
+  vertical-align: middle;
+  background-color: #e6e6e6;
+}
+/* line 26, ../sass/sass/_base.scss */
+.address-more:hover {
+  background-color: #b3b3b3;
+}
+
+/***************管理列表页面样式*******************/
+/* line 8, ../sass/sass/_managePage.scss */
+.query-list-main .query-panel {
+  margin: 30px auto 0;
+  width: 1100px;
+}
+/* line 13, ../sass/sass/_managePage.scss */
+.query-list-main .query-panel .panel .panel-header .panel-title {
+  height: 25px;
+  line-height: 25px;
+}
+/* line 15, ../sass/sass/_managePage.scss */
+.query-list-main .query-panel .panel .panel-header .panel-title .add-btn {
+  padding-left: 10px;
+  font-family: "Microsoft Yahei", "微软雅黑";
+  color: #5a5a5a;
+  font-weight: bold;
+}
+/* line 20, ../sass/sass/_managePage.scss */
+.query-list-main .query-panel .panel .panel-header .panel-title .add-btn input {
+  cursor: pointer;
+  margin-right: 5px;
+  border: none;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  font-weight: bold;
+  color: #5a5a5a;
+  padding: 5px 10px;
+  outline: none;
+}
+/* line 30, ../sass/sass/_managePage.scss */
+.query-list-main .query-panel .panel .panel-header .panel-title .add-btn .short:hover, .query-list-main .query-panel .panel .panel-header .panel-title .add-btn .add-other {
+  background-color: #0e6595;
+  color: #fff;
+}
+/* line 34, ../sass/sass/_managePage.scss */
+.query-list-main .query-panel .panel .panel-header .panel-title .add-btn .add-other {
+  margin-left: 15px;
+}
+/* line 41, ../sass/sass/_managePage.scss */
+.query-list-main .query-panel .query-item {
+  padding-top: 10px;
+  *zoom: 1;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+.query-list-main .query-panel .query-item:before, .query-list-main .query-panel .query-item:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+.query-list-main .query-panel .query-item:after {
+  clear: both;
+  overflow: hidden;
+}
+/* line 44, ../sass/sass/_managePage.scss */
+.query-list-main .query-panel .query-item .item {
+  display: none;
+  float: left;
+  _display: inline;
+  height: 22px;
+  line-height: 22px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  padding: 0 15px;
+}
+/* line 51, ../sass/sass/_managePage.scss */
+.query-list-main .query-panel .query-item .item .pro, .query-list-main .query-panel .query-item .info-main .base-info .person-info .content .item .val, .info-main .base-info .person-info .content .query-list-main .query-panel .query-item .item .val, .query-list-main .query-panel .query-item .info-main #export_panel .relation-info .person-info .content .item .val, .info-main #export_panel .relation-info .person-info .content .query-list-main .query-panel .query-item .item .val, .query-list-main .query-panel .query-item #export_panel .info-main .relation-info .person-info .content .item .val, #export_panel .info-main .relation-info .person-info .content .query-list-main .query-panel .query-item .item .val {
+  color: #5a5a5a;
+  font-weight: bold;
+  margin-right: 10px;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+/* line 59, ../sass/sass/_managePage.scss */
+.query-list-main .query-panel .query-item .item .pro i, .query-list-main .query-panel .query-item .info-main .base-info .person-info .content .item .val i, .info-main .base-info .person-info .content .query-list-main .query-panel .query-item .item .val i, .query-list-main .query-panel .query-item .info-main #export_panel .relation-info .person-info .content .item .val i, .info-main #export_panel .relation-info .person-info .content .query-list-main .query-panel .query-item .item .val i, .query-list-main .query-panel .query-item #export_panel .info-main .relation-info .person-info .content .item .val i, #export_panel .info-main .relation-info .person-info .content .query-list-main .query-panel .query-item .item .val i {
+  color: #ed4848;
+  padding-right: 5px;
+}
+/* line 64, ../sass/sass/_managePage.scss */
+.query-list-main .query-panel .query-item .item .val {
+  border: none;
+  outline: none;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *dispaly: inline;
+  width: 250px;
+  height: 20px;
+  line-height: 20px;
+}
+/* line 73, ../sass/sass/_managePage.scss */
+.query-list-main .query-panel .query-btn {
+  margin: 20px 0;
+  text-align: center;
+}
+/* line 76, ../sass/sass/_managePage.scss */
+.query-list-main .query-panel .query-btn a {
+  width: 60px;
+  margin: 0 10px;
+}
+/* line 84, ../sass/sass/_managePage.scss */
+.query-list-main .content .content-table {
+  margin: 20px auto 0;
+  width: 1100px;
+}
+/* line 88, ../sass/sass/_managePage.scss */
+.query-list-main .content .bottom-btn {
+  margin: 30px auto 0;
+  width: 1100px;
+  *zoom: 1;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+.query-list-main .content .bottom-btn:before, .query-list-main .content .bottom-btn:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+.query-list-main .content .bottom-btn:after {
+  clear: both;
+  overflow: hidden;
+}
+/* line 92, ../sass/sass/_managePage.scss */
+.query-list-main .content .bottom-btn a#set_table_btn {
+  float: right;
+  _display: inline;
+}
+
+/* line 101, ../sass/sass/_managePage.scss */
+#other_condition_panel .query-condition {
+  *zoom: 1;
+  padding: 15px;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+#other_condition_panel .query-condition:before, #other_condition_panel .query-condition:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+#other_condition_panel .query-condition:after {
+  clear: both;
+  overflow: hidden;
+}
+/* line 104, ../sass/sass/_managePage.scss */
+#other_condition_panel .query-condition .item {
+  font-size: 12px;
+  float: left;
+  width: 142px;
+  margin-bottom: 10px;
+}
+/* line 109, ../sass/sass/_managePage.scss */
+#other_condition_panel .query-condition .item input {
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+/* line 119, ../sass/sass/_managePage.scss */
+#set_table_panel .table-header-drag {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  /*已选表头*/
+  /*待选表头*/
+}
+/* line 123, ../sass/sass/_managePage.scss */
+#set_table_panel .table-header-drag ul {
+  width: 100%;
+  list-style-type: none;
+  margin: 5px 0;
+  padding: 0;
+  *zoom: 1;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+#set_table_panel .table-header-drag ul:before, #set_table_panel .table-header-drag ul:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+#set_table_panel .table-header-drag ul:after {
+  clear: both;
+  overflow: hidden;
+}
+/* line 129, ../sass/sass/_managePage.scss */
+#set_table_panel .table-header-drag ul li {
+  float: left;
+  margin: 2px;
+  cursor: pointer;
+}
+/* line 133, ../sass/sass/_managePage.scss */
+#set_table_panel .table-header-drag ul li div {
+  text-align: center;
+  padding: 0 20px;
+  background-color: #39980f;
+  color: #fff;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+}
+/* line 144, ../sass/sass/_managePage.scss */
+#set_table_panel .table-header-drag ul .placeHolder div {
+  background-color: #fff !important;
+  border: dashed 1px #999 !important;
+}
+/* line 151, ../sass/sass/_managePage.scss */
+#set_table_panel .table-header-drag .selected-header {
+  *zoom: 1;
+  padding: 10px;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+#set_table_panel .table-header-drag .selected-header:before, #set_table_panel .table-header-drag .selected-header:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+#set_table_panel .table-header-drag .selected-header:after {
+  clear: both;
+  overflow: hidden;
+}
+/* line 156, ../sass/sass/_managePage.scss */
+#set_table_panel .table-header-drag .selected-header ul li div {
+  background-color: #ed4848;
+}
+/* line 161, ../sass/sass/_managePage.scss */
+#set_table_panel .table-header-drag .selected-header > div {
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #ccc;
+}
+/* line 168, ../sass/sass/_managePage.scss */
+#set_table_panel .table-header-drag .waiting-header {
+  *zoom: 1;
+  padding: 10px;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+#set_table_panel .table-header-drag .waiting-header:before, #set_table_panel .table-header-drag .waiting-header:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+#set_table_panel .table-header-drag .waiting-header:after {
+  clear: both;
+  overflow: hidden;
+}
+/* line 171, ../sass/sass/_managePage.scss */
+#set_table_panel .table-header-drag .waiting-header > div {
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #ccc;
+}
+/* line 176, ../sass/sass/_managePage.scss */
+#set_table_panel .table-header-drag .tips {
+  width: auto;
+  margin: 10px auto;
+  padding: 0 10px;
+  color: #999;
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+}
+
+/* line 189, ../sass/sass/_managePage.scss */
+#logout_panel .logout-reason {
+  padding: 0 10px;
+  margin: 20px auto;
+  font-size: 14px;
+}
+/* line 193, ../sass/sass/_managePage.scss */
+#logout_panel .logout-reason span.title, #logout_panel .logout-reason .living-info span.living-table-div, #logout_panel .living-info .logout-reason span.living-table-div {
+  color: #5a5a5a;
+  margin-right: 10px;
+  font-weight: bold;
+  text-align: right;
+  width: 100px;
+}
+/* line 199, ../sass/sass/_managePage.scss */
+#logout_panel .logout-reason span.title i, #logout_panel .logout-reason .living-info span.living-table-div i, #logout_panel .living-info .logout-reason span.living-table-div i {
+  color: #ed4848;
+  margin-right: 5px;
+}
+/* line 205, ../sass/sass/_managePage.scss */
+#logout_panel .logout-reason .select-reason {
+  margin-bottom: 20px;
+}
+/* line 209, ../sass/sass/_managePage.scss */
+#logout_panel .logout-reason .remark-reason span {
+  vertical-align: top;
+}
+/* line 212, ../sass/sass/_managePage.scss */
+#logout_panel .logout-reason .remark-reason textarea {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  resize: none;
+  width: 680px;
+  height: 60px;
+  overflow: auto;
+}
+/* line 220, ../sass/sass/_managePage.scss */
+#logout_panel .logout-reason .remark-reason ul.warning {
+  padding: 0 27px 0 70px;
+  list-style-type: none;
+  margin: 20px 0 0;
+  *zoom: 1;
+  font-size: 12px;
+  color: #999;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+#logout_panel .logout-reason .remark-reason ul.warning:before, #logout_panel .logout-reason .remark-reason ul.warning:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+#logout_panel .logout-reason .remark-reason ul.warning:after {
+  clear: both;
+  overflow: hidden;
+}
+/* line 227, ../sass/sass/_managePage.scss */
+#logout_panel .logout-reason .remark-reason ul.warning li {
+  width: 50%;
+  float: left;
+  _display: inline;
+  height: 20px;
+  line-height: 20px;
+  margin-bottom: 3px;
+}
+/* line 232, ../sass/sass/_managePage.scss */
+#logout_panel .logout-reason .remark-reason ul.warning li i {
+  padding-right: 5px;
+}
+/* line 236, ../sass/sass/_managePage.scss */
+#logout_panel .logout-reason .remark-reason ul.warning li.li-full {
+  width: 100%;
+}
+/* line 239, ../sass/sass/_managePage.scss */
+#logout_panel .logout-reason .remark-reason ul.warning li.li-warning {
+  color: #ed4848;
+}
+/* line 244, ../sass/sass/_managePage.scss */
+#logout_panel .logout-reason .tips {
+  padding: 0 10px;
+  text-align: right;
+  color: #ed4848;
+  font-size: 12px;
+  height: 20px;
+  line-height: 20px;
+}
+/* line 252, ../sass/sass/_managePage.scss */
+#logout_panel .living-info {
+  height: 100%;
+}
+/* line 254, ../sass/sass/_managePage.scss */
+#logout_panel .living-info .title, #logout_panel .living-info .living-table-div {
+  padding: 0 10px;
+  margin: 10px auto;
+  color: #5a5a5a;
+  font-weight: bold;
+}
+/* line 260, ../sass/sass/_managePage.scss */
+#logout_panel .living-info .living-table-div {
+  height: 100%;
+  width: 778px;
+}
+/* line 265, ../sass/sass/_managePage.scss */
+#logout_panel .living-info .tips {
+  padding: 0 10px;
+  margin: 10px auto;
+  text-align: right;
+  color: #999;
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+}
+
+/* line 278, ../sass/sass/_managePage.scss */
+#export_panel .base-info, #export_panel .relation-info {
+  width: 760px;
+  margin: 10px auto 0;
+}
+/* line 281, ../sass/sass/_managePage.scss */
+#export_panel .base-info input, #export_panel .relation-info input {
+  vertical-align: middle;
+}
+/* line 284, ../sass/sass/_managePage.scss */
+#export_panel .base-info span, #export_panel .relation-info span {
+  font-size: 12px;
+}
+/* line 287, ../sass/sass/_managePage.scss */
+#export_panel .base-info .title, #export_panel .relation-info .title, #export_panel .base-info #logout_panel .living-info .living-table-div, #logout_panel .living-info #export_panel .base-info .living-table-div, #export_panel .relation-info #logout_panel .living-info .living-table-div, #logout_panel .living-info #export_panel .relation-info .living-table-div {
+  *zoom: 1;
+  border-bottom: 1px dashed #ccc;
+  padding: 5px;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+#export_panel .base-info .title:before, #export_panel .relation-info .title:before, #export_panel .base-info #logout_panel .living-info .living-table-div:before, #logout_panel .living-info #export_panel .base-info .living-table-div:before, #export_panel .relation-info #logout_panel .living-info .living-table-div:before, #logout_panel .living-info #export_panel .relation-info .living-table-div:before, #export_panel .base-info .title:after, #export_panel .relation-info .title:after, #export_panel .base-info #logout_panel .living-info .living-table-div:after, #logout_panel .living-info #export_panel .base-info .living-table-div:after, #export_panel .relation-info #logout_panel .living-info .living-table-div:after, #logout_panel .living-info #export_panel .relation-info .living-table-div:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+#export_panel .base-info .title:after, #export_panel .relation-info .title:after, #export_panel .base-info #logout_panel .living-info .living-table-div:after, #logout_panel .living-info #export_panel .base-info .living-table-div:after, #export_panel .relation-info #logout_panel .living-info .living-table-div:after, #logout_panel .living-info #export_panel .relation-info .living-table-div:after {
+  clear: both;
+  overflow: hidden;
+}
+/* line 291, ../sass/sass/_managePage.scss */
+#export_panel .base-info .title .title-name, #export_panel .relation-info .title .title-name, #export_panel .base-info #logout_panel .living-info .living-table-div .title-name, #logout_panel .living-info #export_panel .base-info .living-table-div .title-name, #export_panel .relation-info #logout_panel .living-info .living-table-div .title-name, #logout_panel .living-info #export_panel .relation-info .living-table-div .title-name {
+  float: left;
+  font-weight: bold;
+}
+/* line 292, ../sass/sass/_managePage.scss */
+#export_panel .base-info .title .title-name span, #export_panel .relation-info .title .title-name span, #export_panel .base-info #logout_panel .living-info .living-table-div .title-name span, #logout_panel .living-info #export_panel .base-info .living-table-div .title-name span, #export_panel .relation-info #logout_panel .living-info .living-table-div .title-name span, #logout_panel .living-info #export_panel .relation-info .living-table-div .title-name span {
+  font-size: 18px;
+}
+/* line 298, ../sass/sass/_managePage.scss */
+#export_panel .base-info .title .title-btn, #export_panel .relation-info .title .title-btn, #export_panel .base-info #logout_panel .living-info .living-table-div .title-btn, #logout_panel .living-info #export_panel .base-info .living-table-div .title-btn, #export_panel .relation-info #logout_panel .living-info .living-table-div .title-btn, #logout_panel .living-info #export_panel .relation-info .living-table-div .title-btn {
+  float: right;
+}
+/* line 302, ../sass/sass/_managePage.scss */
+#export_panel .base-info .content, #export_panel .relation-info .content {
+  *zoom: 1;
+  padding: 10px 0;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+#export_panel .base-info .content:before, #export_panel .relation-info .content:before, #export_panel .base-info .content:after, #export_panel .relation-info .content:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+#export_panel .base-info .content:after, #export_panel .relation-info .content:after {
+  clear: both;
+  overflow: hidden;
+}
+/* line 305, ../sass/sass/_managePage.scss */
+#export_panel .base-info .content .item, #export_panel .relation-info .content .item {
+  float: left;
+  width: 120px;
+  margin-bottom: 5px;
+}
+/* line 315, ../sass/sass/_managePage.scss */
+#export_panel .tips {
+  width: 760px;
+  margin: 10px auto 0;
+}
+/* line 318, ../sass/sass/_managePage.scss */
+#export_panel .tips i {
+  color: #999;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *dispaly: inline;
+}
+/* line 322, ../sass/sass/_managePage.scss */
+#export_panel .tips span {
+  font-size: 12px;
+  color: #999;
+}
+
+/*小区选择面板*/
+/* line 331, ../sass/sass/_managePage.scss */
+#xqmc_panel .query-div {
+  margin: 20px 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #ccc;
+  *zoom: 1;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+#xqmc_panel .query-div:before, #xqmc_panel .query-div:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+#xqmc_panel .query-div:after {
+  clear: both;
+  overflow: hidden;
+}
+/* line 336, ../sass/sass/_managePage.scss */
+#xqmc_panel .query-div > a {
+  float: right;
+  _display: inline;
+  margin-left: 5px;
+}
+/* line 341, ../sass/sass/_managePage.scss */
+#xqmc_panel .content-table {
+  margin: 10px;
+  *zoom: 1;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+#xqmc_panel .content-table:before, #xqmc_panel .content-table:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+#xqmc_panel .content-table:after {
+  clear: both;
+  overflow: hidden;
+}
+/* line 345, ../sass/sass/_managePage.scss */
+#xqmc_panel .tip {
+  padding: 10px 10px 0;
+  *zoom: 1;
+  color: #999;
+  font-size: 12px;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+#xqmc_panel .tip:before, #xqmc_panel .tip:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+#xqmc_panel .tip:after {
+  clear: both;
+  overflow: hidden;
+}
+/* line 350, ../sass/sass/_managePage.scss */
+#xqmc_panel .tip i {
+  margin-right: 5px;
+}
+/* line 354, ../sass/sass/_managePage.scss */
+#xqmc_panel .tips {
+  padding: 0 10px 20px;
+  *zoom: 1;
+  color: #ed4848;
+  text-align: right;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+#xqmc_panel .tips:before, #xqmc_panel .tips:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+#xqmc_panel .tips:after {
+  clear: both;
+  overflow: hidden;
+}
+
+/*****************新增页面样式***********************/
+/* line 7, ../sass/sass/_addPage.scss */
+.add-main .infos-main {
+  width: 1198px;
+  margin-top: 20px;
+  *zoom: 1;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+.add-main .infos-main:before, .add-main .infos-main:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+.add-main .infos-main:after {
+  clear: both;
+  overflow: hidden;
+}
+/* line 11, ../sass/sass/_addPage.scss */
+.add-main .infos-main .photo {
+  width: 265px;
+  height: 300px;
+  float: left;
+  _display: inline;
+  position: relative;
+}
+/* line 16, ../sass/sass/_addPage.scss */
+.add-main .infos-main .photo .img {
+  position: absolute;
+  top: -35px;
+  left: 40px;
+  width: 185px;
+  height: 230px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+/* line 23, ../sass/sass/_addPage.scss */
+.add-main .infos-main .photo .img img {
+  width: 185px;
+  height: 230px;
+}
+/* line 26, ../sass/sass/_addPage.scss */
+.add-main .infos-main .photo .img a {
+  width: 120px;
+  margin-top: 10px;
+}
+/* line 32, ../sass/sass/_addPage.scss */
+.add-main .infos-main .photo-info {
+  width: 265px;
+  height: 300px;
+  float: left;
+  _display: inline;
+  position: relative;
+}
+/* line 37, ../sass/sass/_addPage.scss */
+.add-main .infos-main .photo-info .img-div {
+  position: absolute;
+  left: 36px;
+  border: 1px #ccc solid;
+}
+/* line 41, ../sass/sass/_addPage.scss */
+.add-main .infos-main .photo-info .img-div img {
+  width: 185px;
+  height: 230px;
+}
+/* line 46, ../sass/sass/_addPage.scss */
+.add-main .infos-main .photo-info .edit-div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+/* line 53, ../sass/sass/_addPage.scss */
+.add-main .infos-main .content {
+  position: relative;
+  width: 933px;
+  float: right;
+  _display: inline;
+}
+/* line 57, ../sass/sass/_addPage.scss */
+.add-main .infos-main .content .top-btn {
+  text-align: right;
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+}
+/* line 62, ../sass/sass/_addPage.scss */
+.add-main .infos-main .content .person-info {
+  font-size: 12px;
+}
+/* line 64, ../sass/sass/_addPage.scss */
+.add-main .infos-main .content .person-info .info-item {
+  min-height: 30px;
+  line-height: 30px;
+  height: auto;
+  margin-bottom: 5px;
+  /*实有房屋----产权人信息*/
+  /*隐藏照片上传框*/
+}
+/* line 70, ../sass/sass/_addPage.scss */
+.add-main .infos-main .content .person-info .info-item label {
+  line-height: 30px;
+  margin-right: 20px;
+}
+/* line 73, ../sass/sass/_addPage.scss */
+.add-main .infos-main .content .person-info .info-item label input {
+  vertical-align: -2px;
+}
+/* line 77, ../sass/sass/_addPage.scss */
+.add-main .infos-main .content .person-info .info-item .pro, .add-main .infos-main .content .info-main .base-info .person-info .info-item .content .item .val, .info-main .base-info .add-main .infos-main .content .person-info .info-item .content .item .val, .add-main .infos-main .content .info-main .base-info .person-info .content .item .info-item .val, .info-main .base-info .add-main .infos-main .content .person-info .content .item .info-item .val, .add-main .infos-main .content .info-main #export_panel .relation-info .person-info .info-item .content .item .val, .info-main #export_panel .relation-info .add-main .infos-main .content .person-info .info-item .content .item .val, .add-main .infos-main .content .info-main #export_panel .relation-info .person-info .content .item .info-item .val, .info-main #export_panel .relation-info .add-main .infos-main .content .person-info .content .item .info-item .val, .add-main .infos-main .content #export_panel .info-main .relation-info .person-info .info-item .content .item .val, #export_panel .info-main .relation-info .add-main .infos-main .content .person-info .info-item .content .item .val, .add-main .infos-main .content #export_panel .info-main .relation-info .person-info .content .item .info-item .val, #export_panel .info-main .relation-info .add-main .infos-main .content .person-info .content .item .info-item .val {
+  width: 120px;
+  padding-right: 10px;
+  display: inline-block;
+  color: #5a5a5a;
+  font-weight: bold;
+  height: 30px;
+  text-align: right;
+}
+/* line 85, ../sass/sass/_addPage.scss */
+.add-main .infos-main .content .person-info .info-item .pro i, .add-main .infos-main .content .info-main .base-info .person-info .info-item .content .item .val i, .info-main .base-info .add-main .infos-main .content .person-info .info-item .content .item .val i, .add-main .infos-main .content .info-main .base-info .person-info .content .item .info-item .val i, .info-main .base-info .add-main .infos-main .content .person-info .content .item .info-item .val i, .add-main .infos-main .content .info-main #export_panel .relation-info .person-info .info-item .content .item .val i, .info-main #export_panel .relation-info .add-main .infos-main .content .person-info .info-item .content .item .val i, .add-main .infos-main .content .info-main #export_panel .relation-info .person-info .content .item .info-item .val i, .info-main #export_panel .relation-info .add-main .infos-main .content .person-info .content .item .info-item .val i, .add-main .infos-main .content #export_panel .info-main .relation-info .person-info .info-item .content .item .val i, #export_panel .info-main .relation-info .add-main .infos-main .content .person-info .info-item .content .item .val i, .add-main .infos-main .content #export_panel .info-main .relation-info .person-info .content .item .info-item .val i, #export_panel .info-main .relation-info .add-main .infos-main .content .person-info .content .item .info-item .val i {
+  color: #ed4848;
+  padding-right: 5px;
+}
+/* line 90, ../sass/sass/_addPage.scss */
+.add-main .infos-main .content .person-info .info-item span.textbox {
+  line-height: 30px;
+  vertical-align: -6px;
+}
+/* line 95, ../sass/sass/_addPage.scss */
+.add-main .infos-main .content .person-info .info-item .remark {
+  vertical-align: top;
+}
+/* line 98, ../sass/sass/_addPage.scss */
+.add-main .infos-main .content .person-info .info-item textarea {
+  margin-top: 4px;
+}
+/* line 102, ../sass/sass/_addPage.scss */
+.add-main .infos-main .content .person-info .info-item .item-title {
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+  margin: 30px 40px 0 0;
+  border-bottom: 1px dashed #ccc;
+  *zoom: 1;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+.add-main .infos-main .content .person-info .info-item .item-title:before, .add-main .infos-main .content .person-info .info-item .item-title:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+.add-main .infos-main .content .person-info .info-item .item-title:after {
+  clear: both;
+  overflow: hidden;
+}
+/* line 109, ../sass/sass/_addPage.scss */
+.add-main .infos-main .content .person-info .info-item .item-title a {
+  float: right;
+  _display: inline;
+  height: 24px;
+  margin: 0 2px;
+  font-weight: normal;
+  font-size: 12px;
+}
+/* line 115, ../sass/sass/_addPage.scss */
+.add-main .infos-main .content .person-info .info-item .item-title a i {
+  line-height: 24px;
+}
+/* line 120, ../sass/sass/_addPage.scss */
+.add-main .infos-main .content .person-info .info-item a {
+  height: 20px;
+  vertical-align: -6px;
+}
+/* line 123, ../sass/sass/_addPage.scss */
+.add-main .infos-main .content .person-info .info-item a i {
+  line-height: 20px;
+}
+/* line 127, ../sass/sass/_addPage.scss */
+.add-main .infos-main .content .person-info .info-item .h-blank {
+  width: 20px;
+  display: inline-block;
+}
+/* line 131, ../sass/sass/_addPage.scss */
+.add-main .infos-main .content .person-info .info-item .val {
+  font-weight: normal;
+  color: #000;
+  padding: 0;
+}
+/* line 138, ../sass/sass/_addPage.scss */
+.add-main .infos-main .content .person-info .info-item #upload_img {
+  display: none;
+}
+/* line 142, ../sass/sass/_addPage.scss */
+.add-main .infos-main .content .person-info .mphbox {
+  margin-right: 7px;
+  background-color: #eee;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+/* line 147, ../sass/sass/_addPage.scss */
+.add-main .infos-main .content .person-info .mphbox a {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  padding: 0;
+}
+/* line 157, ../sass/sass/_addPage.scss */
+.add-main .add-save-btn {
+  width: 100%;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 20px;
+}
+/* line 162, ../sass/sass/_addPage.scss */
+.add-main .add-save-btn a {
+  margin: 0 10px;
+}
+
+/****************详情页面  时间轴风格样式*******************/
+/* line 7, ../sass/sass/_detailPageTimeline.scss */
+.info-nav {
+  position: fixed;
+  top: 50px;
+  width: 200px;
+  z-index: 1030;
+  display: none;
+}
+/* line 13, ../sass/sass/_detailPageTimeline.scss */
+.info-nav .business-btn {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+}
+/* line 18, ../sass/sass/_detailPageTimeline.scss */
+.info-nav .business-btn li {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+/* line 22, ../sass/sass/_detailPageTimeline.scss */
+.info-nav .business-btn li a {
+  padding: 3px 0;
+  width: 150px;
+}
+/* line 28, ../sass/sass/_detailPageTimeline.scss */
+.info-nav .nav-btn {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin-top: 20px;
+}
+/* line 33, ../sass/sass/_detailPageTimeline.scss */
+.info-nav .nav-btn .slider {
+  position: absolute;
+  left: 20px;
+}
+/* line 37, ../sass/sass/_detailPageTimeline.scss */
+.info-nav .nav-btn .btn {
+  position: absolute;
+  left: 50px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+/* line 43, ../sass/sass/_detailPageTimeline.scss */
+.info-nav .nav-btn .btn li {
+  cursor: pointer;
+  font-weight: bold;
+  color: #5a5a5a;
+  margin-top: 5px;
+  font-size: 14px;
+}
+/* line 50, ../sass/sass/_detailPageTimeline.scss */
+.info-nav .nav-btn .btn .active {
+  background-color: #9cd2e8;
+}
+
+/* line 58, ../sass/sass/_detailPageTimeline.scss */
+.info-main {
+  height: auto;
+  *zoom: 1;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+.info-main:before, .info-main:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+.info-main:after {
+  clear: both;
+  overflow: hidden;
+}
+/* line 62, ../sass/sass/_detailPageTimeline.scss */
+.info-main .base-info, .info-main #export_panel .relation-info, #export_panel .info-main .relation-info {
+  *zoom: 1;
+  height: auto;
+  width: 960px;
+  border-right: 1px solid #ccc;
+  padding-bottom: 40px;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+.info-main .base-info:before, .info-main #export_panel .relation-info:before, #export_panel .info-main .relation-info:before, .info-main .base-info:after, .info-main #export_panel .relation-info:after, #export_panel .info-main .relation-info:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+.info-main .base-info:after, .info-main #export_panel .relation-info:after, #export_panel .info-main .relation-info:after {
+  clear: both;
+  overflow: hidden;
+}
+/* line 68, ../sass/sass/_detailPageTimeline.scss */
+.info-main .base-info .photo-info, .info-main #export_panel .relation-info .photo-info, #export_panel .info-main .relation-info .photo-info {
+  float: left;
+  width: 260px;
+  height: 300px;
+  position: relative;
+}
+/* line 73, ../sass/sass/_detailPageTimeline.scss */
+.info-main .base-info .photo-info .img-div, .info-main #export_panel .relation-info .photo-info .img-div, #export_panel .info-main .relation-info .photo-info .img-div {
+  position: absolute;
+  top: -20px;
+  left: 36px;
+  border: 1px #ccc solid;
+}
+/* line 78, ../sass/sass/_detailPageTimeline.scss */
+.info-main .base-info .photo-info .img-div img, .info-main #export_panel .relation-info .photo-info .img-div img, #export_panel .info-main .relation-info .photo-info .img-div img {
+  width: 185px;
+  height: 230px;
+}
+/* line 83, ../sass/sass/_detailPageTimeline.scss */
+.info-main .base-info .photo-info .edit-div, .info-main #export_panel .relation-info .photo-info .edit-div, #export_panel .info-main .relation-info .photo-info .edit-div {
+  position: absolute;
+  top: 220px;
+  width: 100%;
+  text-align: center;
+}
+/* line 90, ../sass/sass/_detailPageTimeline.scss */
+.info-main .base-info .person-info, .info-main #export_panel .relation-info .person-info, #export_panel .info-main .relation-info .person-info {
+  float: left;
+  width: 700px;
+  height: auto;
+  margin-top: 25px;
+}
+/* line 95, ../sass/sass/_detailPageTimeline.scss */
+.info-main .base-info .person-info .title, .info-main #export_panel .relation-info .person-info .title, #export_panel .info-main .relation-info .person-info .title, .info-main .base-info .person-info #logout_panel .living-info .living-table-div, #logout_panel .living-info .info-main .base-info .person-info .living-table-div, .info-main #export_panel .relation-info .person-info #logout_panel .living-info .living-table-div, #logout_panel .living-info .info-main #export_panel .relation-info .person-info .living-table-div, #export_panel .info-main .relation-info .person-info #logout_panel .living-info .living-table-div, #logout_panel .living-info #export_panel .info-main .relation-info .person-info .living-table-div {
+  *zoom: 1;
+  width: 100%;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+.info-main .base-info .person-info .title:before, .info-main #export_panel .relation-info .person-info .title:before, #export_panel .info-main .relation-info .person-info .title:before, .info-main .base-info .person-info #logout_panel .living-info .living-table-div:before, #logout_panel .living-info .info-main .base-info .person-info .living-table-div:before, .info-main #export_panel .relation-info .person-info #logout_panel .living-info .living-table-div:before, #logout_panel .living-info .info-main #export_panel .relation-info .person-info .living-table-div:before, #export_panel .info-main .relation-info .person-info #logout_panel .living-info .living-table-div:before, #logout_panel .living-info #export_panel .info-main .relation-info .person-info .living-table-div:before, .info-main .base-info .person-info .title:after, .info-main #export_panel .relation-info .person-info .title:after, #export_panel .info-main .relation-info .person-info .title:after, .info-main .base-info .person-info #logout_panel .living-info .living-table-div:after, #logout_panel .living-info .info-main .base-info .person-info .living-table-div:after, .info-main #export_panel .relation-info .person-info #logout_panel .living-info .living-table-div:after, #logout_panel .living-info .info-main #export_panel .relation-info .person-info .living-table-div:after, #export_panel .info-main .relation-info .person-info #logout_panel .living-info .living-table-div:after, #logout_panel .living-info #export_panel .info-main .relation-info .person-info .living-table-div:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+.info-main .base-info .person-info .title:after, .info-main #export_panel .relation-info .person-info .title:after, #export_panel .info-main .relation-info .person-info .title:after, .info-main .base-info .person-info #logout_panel .living-info .living-table-div:after, #logout_panel .living-info .info-main .base-info .person-info .living-table-div:after, .info-main #export_panel .relation-info .person-info #logout_panel .living-info .living-table-div:after, #logout_panel .living-info .info-main #export_panel .relation-info .person-info .living-table-div:after, #export_panel .info-main .relation-info .person-info #logout_panel .living-info .living-table-div:after, #logout_panel .living-info #export_panel .info-main .relation-info .person-info .living-table-div:after {
+  clear: both;
+  overflow: hidden;
+}
+/* line 98, ../sass/sass/_detailPageTimeline.scss */
+.info-main .base-info .person-info .title .name-info, .info-main #export_panel .relation-info .person-info .title .name-info, #export_panel .info-main .relation-info .person-info .title .name-info, .info-main .base-info .person-info #logout_panel .living-info .living-table-div .name-info, #logout_panel .living-info .info-main .base-info .person-info .living-table-div .name-info, .info-main #export_panel .relation-info .person-info #logout_panel .living-info .living-table-div .name-info, #logout_panel .living-info .info-main #export_panel .relation-info .person-info .living-table-div .name-info, #export_panel .info-main .relation-info .person-info #logout_panel .living-info .living-table-div .name-info, #logout_panel .living-info #export_panel .info-main .relation-info .person-info .living-table-div .name-info {
+  float: left;
+  margin-top: 10px;
+}
+/* line 101, ../sass/sass/_detailPageTimeline.scss */
+.info-main .base-info .person-info .title .name-info .name, .info-main #export_panel .relation-info .person-info .title .name-info .name, #export_panel .info-main .relation-info .person-info .title .name-info .name, .info-main .base-info .person-info #logout_panel .living-info .living-table-div .name-info .name, #logout_panel .living-info .info-main .base-info .person-info .living-table-div .name-info .name, .info-main #export_panel .relation-info .person-info #logout_panel .living-info .living-table-div .name-info .name, #logout_panel .living-info .info-main #export_panel .relation-info .person-info .living-table-div .name-info .name, #export_panel .info-main .relation-info .person-info #logout_panel .living-info .living-table-div .name-info .name, #logout_panel .living-info #export_panel .info-main .relation-info .person-info .living-table-div .name-info .name {
+  font-size: 30px;
+  font-weight: bold;
+}
+/* line 106, ../sass/sass/_detailPageTimeline.scss */
+.info-main .base-info .person-info .title .person-btn, .info-main #export_panel .relation-info .person-info .title .person-btn, #export_panel .info-main .relation-info .person-info .title .person-btn, .info-main .base-info .person-info #logout_panel .living-info .living-table-div .person-btn, #logout_panel .living-info .info-main .base-info .person-info .living-table-div .person-btn, .info-main #export_panel .relation-info .person-info #logout_panel .living-info .living-table-div .person-btn, #logout_panel .living-info .info-main #export_panel .relation-info .person-info .living-table-div .person-btn, #export_panel .info-main .relation-info .person-info #logout_panel .living-info .living-table-div .person-btn, #logout_panel .living-info #export_panel .info-main .relation-info .person-info .living-table-div .person-btn {
+  float: right;
+  margin-right: 30px;
+}
+/* line 111, ../sass/sass/_detailPageTimeline.scss */
+.info-main .base-info .person-info .content, .info-main #export_panel .relation-info .person-info .content, #export_panel .info-main .relation-info .person-info .content {
+  *zoom: 1;
+  margin-top: 30px;
+  width: 100%;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+.info-main .base-info .person-info .content:before, .info-main #export_panel .relation-info .person-info .content:before, #export_panel .info-main .relation-info .person-info .content:before, .info-main .base-info .person-info .content:after, .info-main #export_panel .relation-info .person-info .content:after, #export_panel .info-main .relation-info .person-info .content:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+.info-main .base-info .person-info .content:after, .info-main #export_panel .relation-info .person-info .content:after, #export_panel .info-main .relation-info .person-info .content:after {
+  clear: both;
+  overflow: hidden;
+}
+/* line 115, ../sass/sass/_detailPageTimeline.scss */
+.info-main .base-info .person-info .content .item, .info-main #export_panel .relation-info .person-info .content .item, #export_panel .info-main .relation-info .person-info .content .item {
+  float: left;
+  min-height: 30px;
+  line-height: 30px;
+  height: auto;
+  border-bottom: 1px dashed #ccc;
+}
+/* line 121, ../sass/sass/_detailPageTimeline.scss */
+.info-main .base-info .person-info .content .item .pro, .info-main #export_panel .relation-info .person-info .content .item .pro, #export_panel .info-main .relation-info .person-info .content .item .pro, .info-main .base-info .person-info .content .item .val, .info-main #export_panel .relation-info .person-info .content .item .val, #export_panel .info-main .relation-info .person-info .content .item .val {
+  display: inline-block;
+  vertical-align: baseline;
+  *vertical-align: auto;
+  zoom: 1;
+  *dispaly: inline;
+  width: 80px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #747474;
+  position: relative;
+  top: 3px;
+}
+/* line 129, ../sass/sass/_detailPageTimeline.scss */
+.info-main .base-info .person-info .content .item .pro i, .info-main #export_panel .relation-info .person-info .content .item .pro i, #export_panel .info-main .relation-info .person-info .content .item .pro i, .info-main .base-info .person-info .content .item .val i, .info-main #export_panel .relation-info .person-info .content .item .val i, #export_panel .info-main .relation-info .person-info .content .item .val i {
+  color: #ed4848;
+  margin-right: 5px;
+}
+/* line 134, ../sass/sass/_detailPageTimeline.scss */
+.info-main .base-info .person-info .content .item .val, .info-main #export_panel .relation-info .person-info .content .item .val, #export_panel .info-main .relation-info .person-info .content .item .val {
+  vertical-align: middle;
+  width: 240px;
+}
+/* line 139, ../sass/sass/_detailPageTimeline.scss */
+.info-main .base-info .person-info .content .item .clear-border, .info-main #export_panel .relation-info .person-info .content .item .clear-border, #export_panel .info-main .relation-info .person-info .content .item .clear-border {
+  border: 1px solid #fff;
+}
+/* line 144, ../sass/sass/_detailPageTimeline.scss */
+.info-main .base-info .person-info .content .item-title, .info-main #export_panel .relation-info .person-info .content .item-title, #export_panel .info-main .relation-info .person-info .content .item-title {
+  border-bottom: 1px solid #ccc;
+}
+/* line 146, ../sass/sass/_detailPageTimeline.scss */
+.info-main .base-info .person-info .content .item-title .pro, .info-main #export_panel .relation-info .person-info .content .item-title .pro, #export_panel .info-main .relation-info .person-info .content .item-title .pro, .info-main .base-info .person-info .content .item-title .item .val, .info-main .base-info .person-info .content .item .item-title .val, .info-main #export_panel .relation-info .person-info .content .item-title .item .val, .info-main #export_panel .relation-info .person-info .content .item .item-title .val, #export_panel .info-main .relation-info .person-info .content .item-title .item .val, #export_panel .info-main .relation-info .person-info .content .item .item-title .val {
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+  margin: 10px 0 0;
+}
+/* line 156, ../sass/sass/_detailPageTimeline.scss */
+.info-main .other-info {
+  *zoom: 1;
+  height: auto;
+  width: 960px;
+  border-right: 1px solid #ccc;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+.info-main .other-info:before, .info-main .other-info:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+.info-main .other-info:after {
+  clear: both;
+  overflow: hidden;
+}
+/* line 161, ../sass/sass/_detailPageTimeline.scss */
+.info-main .other-info .title, .info-main .other-info #logout_panel .living-info .living-table-div, #logout_panel .living-info .info-main .other-info .living-table-div {
+  width: 100%;
+  *zoom: 1;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+.info-main .other-info .title:before, .info-main .other-info #logout_panel .living-info .living-table-div:before, #logout_panel .living-info .info-main .other-info .living-table-div:before, .info-main .other-info .title:after, .info-main .other-info #logout_panel .living-info .living-table-div:after, #logout_panel .living-info .info-main .other-info .living-table-div:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+.info-main .other-info .title:after, .info-main .other-info #logout_panel .living-info .living-table-div:after, #logout_panel .living-info .info-main .other-info .living-table-div:after {
+  clear: both;
+  overflow: hidden;
+}
+/* line 164, ../sass/sass/_detailPageTimeline.scss */
+.info-main .other-info .title .tip, .info-main .other-info #logout_panel .living-info .living-table-div .tip, #logout_panel .living-info .info-main .other-info .living-table-div .tip {
+  position: relative;
+  left: -10px;
+  float: left;
+  width: 175px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background-color: #0e6595;
+  color: #fff;
+  font-size: 18px;
+  font-family: "Microsoft Yahei", "微软雅黑";
+}
+/* line 176, ../sass/sass/_detailPageTimeline.scss */
+.info-main .other-info .title .tip:before, .info-main .other-info #logout_panel .living-info .living-table-div .tip:before, #logout_panel .living-info .info-main .other-info .living-table-div .tip:before {
+  position: absolute;
+  border-top: 10px solid #07364f;
+  top: 100%;
+  border-left: 10px solid transparent;
+  left: 0;
+}
+/* line 180, ../sass/sass/_detailPageTimeline.scss */
+.info-main .other-info .title .edit-btn, .info-main .other-info #logout_panel .living-info .living-table-div .edit-btn, #logout_panel .living-info .info-main .other-info .living-table-div .edit-btn {
+  float: right;
+  margin-right: 30px;
+  margin-bottom: 0;
+}
+/* line 186, ../sass/sass/_detailPageTimeline.scss */
+.info-main .other-info .content {
+  width: 900px;
+  height: auto;
+  margin: 25px auto 40px;
+}
+/* line 190, ../sass/sass/_detailPageTimeline.scss */
+.info-main .other-info .content .form-content {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px 0;
+  *zoom: 1;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+.info-main .other-info .content .form-content:before, .info-main .other-info .content .form-content:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+.info-main .other-info .content .form-content:after {
+  clear: both;
+  overflow: hidden;
+}
+/* line 195, ../sass/sass/_detailPageTimeline.scss */
+.info-main .other-info .content .form-content li {
+  background-color: #eef1f6;
+  width: 440px;
+  float: left;
+  _display: inline;
+  line-height: 22px;
+  min-height: 22px;
+  height: auto;
+  margin-bottom: 10px;
+  *zoom: 1;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+.info-main .other-info .content .form-content li:before, .info-main .other-info .content .form-content li:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+.info-main .other-info .content .form-content li:after {
+  clear: both;
+  overflow: hidden;
+}
+/* line 204, ../sass/sass/_detailPageTimeline.scss */
+.info-main .other-info .content .form-content li label {
+  cursor: default;
+  display: inline-block;
+  width: 135px;
+  margin-right: 15px;
+  float: left;
+  _display: inline;
+  text-align: right;
+  color: #5a5a5a;
+  font-weight: bold;
+}
+/* line 214, ../sass/sass/_detailPageTimeline.scss */
+.info-main .other-info .content .form-content li .textbox {
+  background: transparent;
+  border: 1px solid #eef1f6;
+}
+/* line 218, ../sass/sass/_detailPageTimeline.scss */
+.info-main .other-info .content .form-content li input {
+  background: transparent;
+}
+/* line 222, ../sass/sass/_detailPageTimeline.scss */
+.info-main .other-info .content .form-content li:nth-child(2n) {
+  margin-left: 20px;
+}
+/* line 225, ../sass/sass/_detailPageTimeline.scss */
+.info-main .other-info .content .form-content li.li-full {
+  width: 900px;
+  margin: 0 0 10px !important;
+}
+
+/* line 236, ../sass/sass/_detailPageTimeline.scss */
+.info-edit .base-info, .info-edit #export_panel .relation-info, #export_panel .info-edit .relation-info {
+  border: none;
+  width: auto;
+}
+/* line 239, ../sass/sass/_detailPageTimeline.scss */
+.info-edit .base-info .person-info, .info-edit #export_panel .relation-info .person-info, #export_panel .info-edit .relation-info .person-info {
+  margin-left: 40px;
+}
+/* line 242, ../sass/sass/_detailPageTimeline.scss */
+.info-edit .base-info .person-info .item span.pro-right, .info-edit #export_panel .relation-info .person-info .item span.pro-right, #export_panel .info-edit .relation-info .person-info .item span.pro-right {
+  margin-left: 30px;
+}

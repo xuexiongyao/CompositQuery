@@ -1,0 +1,360 @@
+@charset "utf-8";
+
+/***************管理列表页面样式*******************/
+
+//管理  实有人口 | 实有单位 | 标准地址 | 巡逻盘查 | 实有房屋 | 警务日志
+.query-list-main {
+    @extend .main;
+    .query-panel {
+        margin: 30px auto 0;
+        width: 1100px;
+        .panel {
+            .panel-header {
+                .panel-title {
+                    @include text-vertical-center(25px);
+                    .add-btn {
+                        padding-left: 10px;
+                        font-family: fontFamily(yh);
+                        color: colors(textColor);
+                        font-weight: bold;
+                        input {
+                            cursor: pointer;
+                            margin-right: 5px;
+                            border: none;
+                            @include prefix(border, radius, 3px);
+                            font-weight: bold;
+                            color: colors(textColor);
+                            padding: 5px 10px;
+                            outline: none;
+                        }
+                        .short:hover, .add-other {
+                            background-color: colors(link);
+                            color: colors(white);
+                        }
+                        .add-other {
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        .query-item {
+            padding-top: 10px;
+            @include clearfix;
+            .item {
+                display: none;
+                @include float(left);
+                @include text-vertical-center(22px);
+                margin-bottom:20px;
+                font-size: fontSize(small);
+                padding: 0 15px;
+                .pro {
+                    //display: inline-block;
+                    //width: 70px;
+                    color: colors(textColor);
+                    font-weight: bold;
+                    margin-right:10px;
+                    @include text-vertical-center(20px);
+                    @include text-overflow;
+                    i{
+                        color: colors(red);
+                        padding-right:5px;
+                    }
+                }
+                .val {
+                    border: none;
+                    outline: none;
+                    @include inline-block;
+                    width: 250px;
+                    @include text-vertical-center(20px);
+                }
+            }
+        }
+        .query-btn {
+            margin: 20px 0;
+            @include text-align(center);
+            a {
+                width: 60px;
+                margin: 0 10px;
+            }
+        }
+    }
+
+    .content {
+        .content-table {
+            margin: 20px auto 0;
+            width: 1100px;
+        }
+        .bottom-btn {
+            margin: 30px auto 0;
+            width: 1100px;
+            @include clearfix;
+            a#set_table_btn{
+                @include float(right);
+            }
+        }
+    }
+}
+
+//搜索框栏 添加更多条件  面板样式
+#other_condition_panel {
+    .query-condition {
+        @include clearfix;
+        padding: 15px;
+        .item {
+            font-size: fontSize(small);
+            float: left;
+            width: 142px;
+            margin-bottom: 10px;
+            input {
+                cursor: pointer;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+//配置表格  面板样式
+#set_table_panel {
+    .table-header-drag {
+        width: 100%;
+        height: auto;
+        margin-bottom:20px;
+        ul {
+            width: 100%;
+            list-style-type: none;
+            margin:5px 0;
+            padding:0;
+            @include clearfix;
+            li {
+                float: left;
+                margin: 2px;
+                cursor: pointer;
+                div {
+                    text-align: center;
+                    padding:0 20px;
+                    background-color: colors(green);
+                    color: colors(white);
+                    @include text-vertical-center(30px);
+                    @include prefix(border,radius,3px);
+                }
+
+            }
+            .placeHolder {
+                div {
+                    background-color: colors(white) !important;
+                    border: dashed 1px colors(gray) !important;
+                }
+            }
+        }
+        /*已选表头*/
+        .selected-header {
+            @include clearfix;
+            padding:10px;
+            ul{
+                li{
+                    div{
+                        background-color: colors(red);
+                    }
+                }
+            }
+            >div{
+                padding-bottom:5px;
+                border-bottom: 1px dashed colors(borderColor);
+            }
+
+        }
+        /*待选表头*/
+        .waiting-header {
+            @include clearfix;
+            padding:10px;
+            >div{
+                padding-bottom:5px;
+                border-bottom: 1px dashed colors(borderColor);
+            }
+        }
+        .tips {
+            width: auto;
+            margin: 10px auto;
+            padding:0 10px;
+            color: colors(gray);
+            font-size: fontSize(small);
+            @include text-vertical-center(30px);
+        }
+    }
+}
+
+//注销  面板样式
+#logout_panel {
+    .logout-reason {
+        padding:0 10px;
+        margin: 20px auto;
+        font-size: fontSize(base);
+        span.title {
+            color: colors(textColor);
+            margin-right: 10px;
+            font-weight:bold;
+            text-align: right;
+            width:100px;
+            i{
+                color: colors(red);
+                margin-right:5px;
+            }
+
+        }
+        .select-reason {
+            margin-bottom: 20px;
+        }
+        .remark-reason {
+            span {
+                vertical-align: top;
+            }
+            textarea {
+                @include border(1px, solid, colors(borderColor));
+                @include prefix(border, radius, 3px);
+                resize: none;
+                @include size(680px, 60px);
+                overflow: auto;
+            }
+            //warning tips
+            ul.warning{
+                padding: 0 27px 0 70px;
+                list-style-type: none;
+                margin:20px 0 0;
+                @include clearfix;
+                font-size: fontSize(small);
+                color: colors(gray);
+                li{
+                    width:50%;
+                    @include float(left);
+                    @include text-vertical-center(20px);
+                    margin-bottom:3px;
+                    i{
+                        padding-right:5px;
+                    }
+                }
+                li.li-full{
+                    width:100%;
+                }
+                li.li-warning{
+                    color: colors(red);
+                }
+            }
+        }
+        .tips{
+            padding:0 10px;
+            text-align: right;
+            color: colors(red);
+            font-size: fontSize(small);
+            @include text-vertical-center(20px);
+        }
+    }
+    .living-info {
+        height:100%;
+        .title {
+            padding:0 10px;
+            margin: 10px auto;
+            color: colors(textColor);
+            font-weight:bold;
+        }
+        .living-table-div {
+            height:100%;
+            @extend .title;
+            width:778px;
+        }
+        .tips {
+            padding:0 10px;
+            margin: 10px auto;
+            text-align: right;
+            color: colors(gray);
+            font-size: fontSize(small);
+            @include text-vertical-center(30px);
+        }
+    }
+}
+
+//批量导出  面板样式
+#export_panel {
+    .base-info {
+        width: 760px;
+        margin: 10px auto 0;
+        input {
+            vertical-align: middle;
+        }
+        span {
+            font-size: fontSize(small);
+        }
+        .title {
+            @include clearfix;
+            border-bottom: 1px dashed colors(borderColor);
+            padding: 5px;
+            .title-name {
+                span {
+                    font-size: fontSize(large);
+                }
+                float: left;
+                font-weight: bold;
+            }
+            .title-btn {
+                float: right;
+            }
+        }
+        .content {
+            @include clearfix;
+            padding: 10px 0;
+            .item {
+                float: left;
+                width: 120px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+    .relation-info {
+        @extend .base-info;
+    }
+    .tips {
+        width: 760px;
+        margin: 10px auto 0;
+        i{
+            color: colors(gray);
+            @include inline-block;
+        }
+        span {
+            font-size: fontSize(small);
+            color: colors(gray);
+        }
+    }
+}
+
+/*小区选择面板*/
+#xqmc_panel{
+    .query-div{
+        margin: 20px 10px;
+        padding-bottom: 20px;
+        border-bottom:1px dashed colors(borderColor);
+        @include clearfix;
+        >a{
+            @include float(right);
+            margin-left:5px;
+        }
+    }
+    .content-table{
+        margin: 10px;
+        @include clearfix;
+    }
+    .tip{
+        padding: 10px 10px 0;
+        @include clearfix;
+        color: colors(gray);
+        font-size: fontSize(small);
+        i{
+            margin-right:5px;
+        }
+    }
+    .tips{
+        padding: 0 10px 20px;
+        @include clearfix;
+        color: colors(red);
+        @include text-align(right);
+    }
+}

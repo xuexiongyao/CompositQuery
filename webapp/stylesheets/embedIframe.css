@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/***********************************/
+/**
+ * 获取颜色map方法
+ * @param $key 颜色的key值
+ */
+/**
+ * 获取字体map方法
+ * @param $key 颜色的key值
+ */
+/**
+ * 获取字体大小map方法
+ * @param $key 颜色的key值
+ */
+/**
+ * 获取行高map方法
+ * @param $key 颜色的key值
+ */
+/**
+ * 获取圆角map方法
+ * @param $key 颜色的key值
+ */
+/**
+ * 获取z-index map方法
+ * @param $key 颜色的key值
+ */
+/**!
+ * @author christ
+ * 本配置基于sass框架compass,在运用时请注意是否安装sass,compass
+ */
+/*按钮移入渐变*/
+/*disabled btn*/
+/*selected button*/
+/* line 5, ../sass/sass/mixins/_scroll.scss */
+::-webkit-scrollbar {
+  background-color: #fff;
+  width: 5px;
+  height: 10px;
+}
+
+/* line 11, ../sass/sass/mixins/_scroll.scss */
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+/* line 15, ../sass/sass/mixins/_scroll.scss */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.65);
+}
+
+/***********************************/
+/****************iframe内嵌iframe样式*********************/
+/* line 5, ../sass/sass/_embedIframe.scss */
+body {
+  background: #fff;
+  overflow-x: hidden;
+}

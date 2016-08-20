@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+.Wdate{
+    padding: 0;
+    text-indent: 5px;
+    outline: none;
+    height:20px;
+    border: 1px solid colors(borderColor);
+    @include prefix(border,radius,3px);
+    background:#fff url(christ/datePicker.png) no-repeat right;
+    &:focus{
+        border-color: colors(borderFocus)!important;
+        @include box-shadow(0 0 3px 0 colors(borderFocus));
+    }
+}
+.Wdate::-ms-clear{display:none;}
+
+.WdateFmtErr{
+    font-weight:bold;
+    color: colors(red);
+}

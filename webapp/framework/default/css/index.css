@@ -1,0 +1,280 @@
+@charset "UTF-8";
+/* line 5, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*引入相关方法*/
+/**! 
+ * @author christ
+ * 本配置基于scss框架compass,在运用时请注意是否安装sass,compass
+ */
+/* @media all and (orientation:portrait){ //这是匹配竖屏的状态，竖屏时的css代码
+  @content;
+}
+@media all and (orientation:landscape){ //这是匹配横屏的状态，横屏时的css代码
+  @content;
+} */
+/**
+ * 自定设置百分比 tags_per_width
+ * 实用范围 知道槽间距为margin-right, 子标签左右对齐父元素
+ * @parm $n 没换多少个标签
+ * @parm $gutter 每个标签间的槽距
+ */
+/**
+ * 获取颜色map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取字体map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取层级map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取圆角map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取圆角map方法
+ * @parm $k 颜色的key值
+ */
+body{
+  background: url("../images/bgi_1.jpg");
+  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+}
+/* line 9, ../sass/scjz/_common.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 12, ../sass/scjz/_common.scss */
+em, i {
+  font-style: normal;
+}
+
+/* line 16, ../sass/scjz/_common.scss */
+.clearfix {
+  clear: both;
+  content: '';
+}
+
+/*自定义浏览器前缀*/
+/* line 5, ../sass/scjz/_index.scss */
+.mainContainer {
+  width: 100%;
+  height: 100%;
+  min-width: 1200px;
+  position: relative;
+}
+/* line 10, ../sass/scjz/_index.scss */
+.mainContainer .boxes {
+  height: 100%;
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  font-size: 14px;
+}
+/* line 15, ../sass/scjz/_index.scss */
+.mainContainer .boxes ul {
+  position: absolute;
+  margin: 40px 0 0;
+  width: 100%;
+}
+/* line 20, ../sass/scjz/_index.scss */
+.mainContainer .boxes li {
+  background: url("../images/metro_bgi.png");
+  position: relative;
+}
+/* line 25, ../sass/scjz/_index.scss */
+.mainContainer .boxes li a {
+  display: block;
+  text-align: center;
+  height: 100%;
+  position: relative;
+}
+/* line 30, ../sass/scjz/_index.scss */
+.mainContainer .boxes li a .boxTitle {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  color: #000;
+  text-align: center;
+  background: #bbbdbe;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* line 44, ../sass/scjz/_index.scss */
+.mainContainer .boxes li a .boxTitle .boxText {
+  position: relative;
+}
+/* line 47, ../sass/scjz/_index.scss */
+.mainContainer .boxes li a .boxTitle .sm_tips {
+  font-style: normal;
+  display: block;
+  text-align: center;
+  padding: 1px 5px;
+  height: 16px;
+  line-height: 16px;
+  position: absolute;
+  top: -10px;
+  right: -20px;
+  font-family: "Microsoft Yahei", SimSun, Tahoma, arial, SimHei, sans-serif;
+  background: #be1313;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+/* line 65, ../sass/scjz/_index.scss */
+.mainContainer .boxes li a img {
+  margin-top: 26px;
+}
+/* line 68, ../sass/scjz/_index.scss */
+.mainContainer .boxes li a .textBox {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  position: absolute;
+  z-index: 800;
+}
+/* line 76, ../sass/scjz/_index.scss */
+.mainContainer .boxes li:hover {
+  box-shadow: 0 0 10px #000;
+}
+/* line 80, ../sass/scjz/_index.scss */
+.mainContainer .boxes li .textTmp {
+  width: 100%;
+  height: 89.3%;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* line 87, ../sass/scjz/_index.scss */
+.mainContainer .boxes li .textTmp a {
+  padding: 0 15px;
+  display: inline-block;
+  height: auto;
+  text-align: left;
+  color: #0f6596;
+}
+/* line 93, ../sass/scjz/_index.scss */
+.mainContainer .boxes li .textTmp a p {
+  line-height: 1.5;
+}
+/* line 96, ../sass/scjz/_index.scss */
+.mainContainer .boxes li .textTmp a .infoText {
+  text-decoration: underline;
+  color: #000;
+}
+/* line 100, ../sass/scjz/_index.scss */
+.mainContainer .boxes li .textTmp a .newData {
+  color: #5a5a5a;
+  text-align: right;
+}
+/* line 105, ../sass/scjz/_index.scss */
+.mainContainer .boxes li .textTmp a:hover .infoText {
+  color: #be1313;
+}
+/* line 109, ../sass/scjz/_index.scss */
+.mainContainer .boxes li .textTmp a:nth-child(1) {
+  padding-top: 15px;
+}
+/* line 119, ../sass/scjz/_index.scss */
+.mainContainer .rectangleBox {
+  width: 620px;
+  height: 300px;
+}
+/* line 124, ../sass/scjz/_index.scss */
+.mainContainer .m-squareBox {
+  width: 300px;
+  height: 300px;
+}
+/* line 129, ../sass/scjz/_index.scss */
+.mainContainer .s-squareBox {
+  width: 140px;
+  height: 140px;
+}
+/* line 136, ../sass/scjz/_index.scss */
+.mainContainer .addNewModel a img {
+  margin-top: 42px !important;
+}
+
+/* line 143, ../sass/scjz/_index.scss */
+.bgiChange {
+  cursor: pointer;
+  position: fixed;
+  z-index: 1030;
+  bottom: 20px;
+  right: 20px;
+  font-family: "Microsoft Yahei", SimSun, Tahoma, arial, SimHei, sans-serif;
+  color: #0a71ba;
+  border-radius: 3px;
+}

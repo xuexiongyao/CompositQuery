@@ -1,0 +1,257 @@
+@charset "utf-8";
+
+.main{
+    .title{
+        color:colors(primary);
+        font-size: fontSize(h3);
+        font-weight: bold;
+        text-align: center;
+        font-family: fontFamily(cn);
+        margin-top: 15px;
+    }
+    .search-btn-box{
+        width:535px;
+        margin:auto;
+        margin-top:15px;
+        .search-btn{
+            display: inline-block;
+            position: relative;
+            top: 3px;
+            left: -5px;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            width:60px;
+            height: 30px;
+            line-height:30px;
+            background-color:colors(primary);
+            color:#fff;
+            font-size: 18px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .advanced-btn{
+            margin-left:5px;
+            font-size: fontSize(base);
+            color:colors(primary);
+        }
+    }
+    .advanced-search-box{
+        @include clearfix;
+        margin:auto;
+        margin-top:10px;
+        width:1100px;
+        //min-height: 100px;
+        background-color: #fff;
+        box-shadow: 0 0 8px #aaa;
+        >div{
+            padding: 0 10px;
+            margin-top: 10px;
+            >div{
+                @include clearfix;
+                border-bottom:1px dashed #ccc;
+                height: 20px;
+                line-height: 20px;
+                .search-title{
+                    float:left;
+                    color: #0D6193;
+                    font-size: fontSize(base);
+                }
+                .search-add{
+                    margin-top: -4px;
+                    float:right;
+                }
+            }
+            ul{
+                list-style-type: none;
+                margin: 10px 0 0px 0;
+                padding: 0;
+                border: 0;
+                width: 100%;
+                height: auto;
+                @include clearfix;
+                li{
+                    float: left;
+                    margin: 5px 0;
+                    width:33.33333%;
+                    .pro{
+                        display: inline-block;
+                        font-size: fontSize(base);
+                        font-weight: bold;
+                        margin:  0 5px;
+                        text-align: right;
+                        width:84px;
+                    }
+                    .condition{
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+        .bottom-btn{
+            margin: 30px auto 20px auto;
+            text-align: center;
+            a{
+                margin: 0 10px;
+            }
+        }
+    }
+    .search-result{
+        margin:auto;
+        margin-top:10px;
+        width:1100px;
+        min-height:150px;
+        height: auto;
+    }
+    .handle-area{
+        margin:auto;
+        margin-top:25px;
+        width:1100px;
+        .all-select-btn{
+            width:auto;
+            min-width:15px;
+            height:15px;
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            left:6px;
+            font-size: fontSize(base);
+        }
+    }
+    .result-table{
+        margin:auto;
+        margin-top:5px;
+        width:1100px;
+        height: auto;
+        .table-content{
+            margin: 10px auto 0 auto;
+            height: 70px;
+            width: 920px;
+            border-bottom: 1px dashed #ccc;
+            @include clearfix;
+            .img-dsc{
+                float:left;
+                height: 50px;
+                line-height: 50px;
+                margin-top: 10px;
+                img{
+                    height: 100%;
+                    width:auto;
+                }
+            }
+            .content-dsc{
+                @include clearfix;
+                height:100%;
+                line-height: 100%;
+                float:left;
+                width: 860px;
+                margin-left: 5px;
+                //border: 1px solid #ccc;
+                .item{
+                    float:left;
+                    margin:5px 0;
+                    .pro{
+                        font-weight:bold;
+                        color:colors(primary);
+                        margin-right: 5px;
+                        text-align: right;
+                        min-width: 80px;
+                        display: inline-block;
+                    }
+                    .val{
+
+                    }
+                }
+            }
+        }
+    }
+    .pagination{
+        margin:auto;
+        margin-top:10px;
+        width:1100px;
+    }
+}
+/*查询条件框*/
+.condition-dialog{
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 5px 15px;
+        border: 0;
+        height: auto;
+        @include clearfix;
+        li{
+            float: left;
+            margin: 5px 0;
+            //width:33.33333%;
+        }
+    }
+}
+//配置表格  面板样式
+#set_table_panel {
+    .table-header-drag {
+        width: 100%;
+        height: auto;
+        margin-bottom:20px;
+        ul {
+            width: 100%;
+            list-style-type: none;
+            margin:5px 0;
+            padding:0;
+            @include clearfix;
+            li {
+                float: left;
+                margin: 2px;
+                cursor: pointer;
+                div {
+                    text-align: center;
+                    padding:0 20px;
+                    background-color: colors(green);
+                    color: colors(white);
+                    @include text-vertical-center(30px);
+                    @include prefix(border,radius,3px);
+                }
+
+            }
+            .placeHolder {
+                div {
+                    background-color: colors(white) !important;
+                    border: dashed 1px colors(gray) !important;
+                }
+            }
+        }
+        /*已选表头*/
+        .selected-header {
+            @include clearfix;
+            padding:10px;
+            ul{
+                li{
+                    div{
+                        background-color: colors(red);
+                    }
+                }
+            }
+            >div{
+                padding-bottom:5px;
+                border-bottom: 1px dashed colors(borderColor);
+            }
+
+        }
+        /*待选表头*/
+        .waiting-header {
+            @include clearfix;
+            padding:10px;
+            >div{
+                padding-bottom:5px;
+                border-bottom: 1px dashed colors(borderColor);
+            }
+        }
+        .tips {
+            width: auto;
+            margin: 10px auto;
+            padding:0 10px;
+            color: colors(gray);
+            font-size: fontSize(small);
+            @include text-vertical-center(30px);
+        }
+    }
+}

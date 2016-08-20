@@ -1,0 +1,10 @@
+//Progress bars
+
+@mixin progress-bar($color){
+    background-color: $color;
+    //gradient-striped 渐变
+    .gradient-striped & {
+        //
+    }
+}
+

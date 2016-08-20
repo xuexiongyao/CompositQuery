@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"><!--默认360极速模式-->
+    <title>综合查询</title>
+    <script src="webapp/common/js/includeCSS.js"></script>
+    <script src="webapp/common/easyui/jquery.min.js"></script>
+    <script src="webapp/common/easyui/jquery.easyui.min.js"></script>
+    <script src="webapp/common/easyui/locale/easyui-lang-zh_CN.js"></script>
+    <script src="webapp/common/js/includeJS.js"></script>
+    <link rel="stylesheet" href="stylesheets/composite.css">
+</head>
+
+<body>
+
+<div class="map-area" id="map_area"></div>
+
+<div class="handle-area">
+    <!--普通条件输入框-->
+    <div class="search-box">
+        <div class="search-box-input">
+            <select name="" id="business_type" class="business-type">
+                <option value="all">全部</option>
+                <option value="syrk">实有人口</option>
+                <option value="sydw">实有单位</option>
+            </select>
+            <input class="search-input" id="search_value">
+            <span class="search-btn" id="normal_search"><i class="fa fa-search"></i></span>
+        </div>
+        <div class="advanced-btn" id="advanced" style="display: none;">
+            <a class="easyui-linkbutton c7" data-options="width:60,height:40"><span class="advanced-btn-text">高级</span></a>
+        </div>
+    </div>
+    <!--高级搜索条件框-->
+    <div id="advanced_box" class="advanced-box" style="display:none">
+        <div class="advanced-search">
+            <!--实有人口-->
+            <div class="search-condition" id="search_condition_syrk">
+                <div class="base-info">
+                    <div class="search-title">
+                        <span class="base-info-title"></span>
+                        <a class="easyui-linkbutton c1 add-condition">添加条件</a>
+                    </div>
+                    <ul></ul>
+                </div>
+                <div class="relation-info">
+                    <div class="search-title">
+                        <span class="relation-info-title"></span>
+                        <a class="easyui-linkbutton c1 add-condition2">添加条件</a>
+                    </div>
+                    <ul></ul>
+                </div>
+            </div>
+            <!--实有单位-->
+            <div class="search-condition" id="search_condition_sydw">
+                <div class="base-info">
+                    <div class="search-title">
+                        <span class="base-info-title"></span>
+                        <a class="easyui-linkbutton c1 add-condition">添加条件1</a>
+                    </div>
+                    <ul></ul>
+                </div>
+                <div class="relation-info">
+                    <div class="search-title">
+                        <span class="relation-info-title"></span>
+                        <a class="easyui-linkbutton c1 add-condition2">添加条件1</a>
+                    </div>
+                    <ul></ul>
+                </div>
+            </div>
+            <div class="cut-line"></div>
+            <div class="btn-area">
+                <a class="easyui-linkbutton c6" id="clear_condition">清除条件</a>
+                <a class="easyui-linkbutton c6" id="advanced_search">查询</a>
+            </div>
+        </div>
+        <!--关闭按钮-->
+        <div class="close-box" id="close">
+            <i class="fa fa-times"></i>
+        </div>
+    </div>
+    <!--搜索结果-->
+    <div class="search-result-box" id="search_result" style="display: none">
+        <div class="search-result">
+            <div class="title">
+                <span>共检索出 <i id="result_count"></i> 条记录</span>
+            </div>
+            <div class="result">
+                <ul></ul>
+                <div class="more-btn" id="more_btn">
+                    <span>点击更多...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--查询条件框-->
+<div id="condition_dialog" class="condition-dialog" style="display:none">
+    <ul></ul>
+</div>
+</body>
+<script>
+    var staticPath = 'webapp/';
+    var local_path = 'webapp/';
+    var window_type = 'open_url';
+</script>
+<script src="js/search_config.js"></script>
+<script src="js/composite.js"></script>
+</html>

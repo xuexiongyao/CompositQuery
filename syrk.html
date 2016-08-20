@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="renderer" content="webkit"><!--默认360极速模式-->
+    <title>综合查询</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <!--<script type="text/javascript" charset="GB2312" src="http://172.29.213.201:7010/EzServerClient/js/EzMapAPI.js"></script>-->
+    <script src="./webapp/common/js/includeCSS.js"></script>
+    <script src="./webapp/common/easyui/jquery.min.js"></script>
+    <script src="./webapp/common/easyui/jquery.easyui.min.js"></script>
+    <script src="./webapp/common/easyui/locale/easyui-lang-zh_CN.js"></script>
+    <script src="./webapp/common/js/includeJS.js"></script>
+    <link rel="stylesheet" href="./stylesheets/composite.css" type="text/css">
+</head>
+<body>
+<div class="main" style="min-height:200px;">
+    <div class="title" id="title_name"></div>
+    <div class="search-btn-box">
+        <input class="easyui-textbox search-input" id="keywords" data-options="prompt:'请输入关键字',width:400,height:30">
+        <span class="fa fa-search search-btn" id="search_all"></span>
+        <a class="easyui-linkbutton c7 advanced-btn" id="advanced" data-options="width:'auto',height:30"><span>高级</span><i class="fa fa-angle-double-down"></i></a>
+    </div>
+    <div class="advanced-search-box" id="advanced_box" style="display: none;"></div>
+
+    <div class="handle-area" id="handle_area" style="display: none;">
+        <label>
+            <input type="checkbox" class="all-select-btn" id="all_select" style="top: 3px;">
+            <span class="all-select-btn">全选/反选</span>
+        </label>
+        <a class="easyui-linkbutton c6" style="margin-left:10px;height:22px;"><span>批量导出</span></a>
+        <a class="easyui-linkbutton c6" style="float:right;height:22px;" id="table_setting"><span>表格配置</span></a>
+    </div>
+    <div class="result-table" id="table_content" style="background:#efefef;">
+        <table id="result_table" style="background:#efefef;"></table>
+    </div>
+    <div class="pagination" id="pagination" style="background:#efefef;display:none"></div>
+</div>
+
+<!--查询条件框-->
+<div id="condition_dialog" class="condition-dialog" style="display:none">
+    <ul></ul>
+</div>
+<!--表格设置面板-->
+<div id="set_table_panel" style="display: none">
+    <div class="table-header-drag">
+        <div class="selected-header">
+            <div>已选字段</div>
+            <ul id="selected_ul"></ul>
+        </div>
+        <div class="waiting-header">
+            <div>待选字段</div>
+            <ul id="waiting_ul"></ul>
+        </div>
+        <div class="tips">
+            <i class="fa fa-info-circle"></i>
+            <span>亲，可以通过拖动来配置显示的内容</span>
+        </div>
+    </div>
+</div>
+</body>
+<script src="dict/Dict_judge.js"></script>
+<script src="dict/Dict_Test.js"></script>
+
+<!--根据不同模块,添加不同的config文件,使用说明见下面引用的js文件-->
+<script src="js/search_config_syrk.js"></script>
+<script src="js/composite.js"></script>
+<script>
+	function 		gotoDetail(obj){
+console.log(obj);
+		alert(obj.attr('ryid'));
+		alert(obj.attr('zjhm'));
+	}
+</script>
+</html>

@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+/*****************新增页面样式***********************/
+// 新增  实有人口 |实有房屋 |标准地址 | 实有单位 |巡逻盘查
+.add-main {
+    @extend .main;
+    .infos-main {
+        width: 1198px;
+        margin-top:20px;
+        @include clearfix;
+        .photo {
+            width: 265px;
+            height:300px;
+            @include float(left);
+            position: relative;
+            .img {
+                position: absolute;
+                top: -35px;
+                left: 40px;
+                @include size(185px, 230px);
+                @include border(1px, solid, colors(borderColor));
+                text-align: center;
+                img {
+                    @include size(185px, 230px);
+                }
+                a {
+                    width: 120px;
+                    margin-top: 10px;
+                }
+            }
+        }
+        .photo-info{
+            width: 265px;
+            height:300px;
+            @include float(left);
+            position: relative;
+            .img-div {
+                position: absolute;
+                left: 36px;
+                border: 1px colors(borderColor) solid;
+                img {
+                    width: 185px;
+                    height: 230px;
+                }
+            }
+            .edit-div {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .content {
+            position: relative;
+            width:933px;
+            @include float(right);
+            .top-btn {
+                @include text-align(right);
+                width: 100%;
+                @include text-vertical-center(25px);
+            }
+            .person-info {
+                font-size: fontSize(small);
+                .info-item {
+                    min-height: 30px;
+                    line-height: 30px;
+                    height:auto;
+                    margin-bottom: 5px;
+                    //border-bottom: 1px dashed colors(borderColor);
+                    label{
+                        line-height: 30px;
+                        margin-right:20px;
+                        input{
+                            vertical-align: -2px;
+                        }
+                    }
+                    .pro {
+                        width: 120px;
+                        padding-right:10px;
+                        display: inline-block;
+                        color: colors(textColor);
+                        font-weight: bold;
+                        height: 30px;
+                        @include text-align(right);
+                        i{
+                            color: colors(red);
+                            padding-right:5px;
+                        }
+                    }
+                    span.textbox{
+                        line-height: 30px;
+                        vertical-align: -6px;
+                    }
+                    //备注textarea框
+                    .remark{
+                        vertical-align: top;
+                    }
+                    textarea{
+                        margin-top:4px;
+                    }
+                    /*实有房屋----产权人信息*/
+                    .item-title{
+                        font-weight:bold;
+                        font-size: fontSize(base);
+                        color: colors(black);
+                        margin: 30px 40px 0 0;
+                        border-bottom:1px dashed colors(borderColor);
+                        @include clearfix;
+                        a{
+                            @include float(right);
+                            height:24px;
+                            margin:0 2px;
+                            font-weight: normal;
+                            font-size: fontSize(small);
+                            i{
+                                line-height:24px;
+                            }
+                        }
+                    }
+                    a{
+                        height:20px;
+                        vertical-align: -6px;
+                        i{
+                            line-height:20px;
+                        }
+                    }
+                    .h-blank{
+                        width:20px;
+                        display: inline-block;
+                    }
+                    .val {
+                        //@extend .pro;
+                        font-weight: normal;
+                        color: colors(black);
+                        padding: 0;
+                    }
+                    /*隐藏照片上传框*/
+                    #upload_img {
+                        display: none;
+                    }
+                }
+                .mphbox{
+                    margin-right:7px;
+                    background-color: colors(tableBgcolor);
+                    @include containerBox;
+                    margin-bottom:5px;
+                    a{
+                        position: absolute;
+                        right:3px;
+                        top:3px;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+    .add-save-btn {
+        width:100%;
+        @include text-align(center);
+        @include text-vertical-center(30px);
+        margin-top: 20px;
+        a{
+            margin:0 10px;
+        }
+    }
+}

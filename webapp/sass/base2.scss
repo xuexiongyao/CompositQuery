@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+/***********************************/
+//引入mixins公共方法
+@import "sass/_mixins";
+
+/***********************************/
+@import "sass/base";
+@import "sass/managePage";
+@import "sass/addPage";
+@import "sass/detailPageTabs";

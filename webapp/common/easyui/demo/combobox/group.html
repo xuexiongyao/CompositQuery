@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Group ComboBox - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../themes/metroBlue/metro-solidBlue/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../../themes/metroBlue/icon.css">
+	<link rel="stylesheet" type="text/css" href="../demo.css">
+	<script type="text/javascript" src="../../jquery.min.bk.js"></script>
+	<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+</head>
+<body>
+	<h2>Group ComboBox</h2>
+	<p>This example shows how to display combobox items in groups.</p>
+	<div style="margin:20px 0">
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="alert($('#test').combobox('getValue'))">getValue</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="setValue()">setValue</a>
+    </div>
+	
+	<input id="test" class="easyui-combobox" name="" style="width:50%;height:100px;" data-options="
+				url: 'combobox_data2.json',
+				method: 'get',
+				valueField:'value',
+				textField:'text',
+				multiple:'true',
+				panelHeight:'auto'
+			">
+
+    <script>
+        function setValue(){
+            $.messager.prompt('title','你好二分局你好二分局你好二分局你好二分局你好二分局你好二分局你好二分局你好二分局你好二分局你好二分局你好二分局你好二分局你好二分局你好二分局你好二分局你好二分局你好二分局你好二分局你好二分局你好二分局你好二分局你好二分局你好二分局你好二分局你好二分局你好二分局',function (v) {
+                if(v){
+                    console.log(v);
+                    $("#test").combobox('setValue',v);
+                }
+            });
+
+//            $.messager.alert('title','hehe','error',function (v) {
+//                console.log(v);
+//            })
+        }
+    </script>
+</body>
+</html>

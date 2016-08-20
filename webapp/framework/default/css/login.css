@@ -1,0 +1,284 @@
+@charset "UTF-8";
+/* line 5, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, .content .loginModel .navUl .formModel li p, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*引入相关方法*/
+/**! 
+ * @author christ
+ * 本配置基于scss框架compass,在运用时请注意是否安装sass,compass
+ */
+/* @media all and (orientation:portrait){ //这是匹配竖屏的状态，竖屏时的css代码
+  @content;
+}
+@media all and (orientation:landscape){ //这是匹配横屏的状态，横屏时的css代码
+  @content;
+} */
+/**
+ * 自定设置百分比 tags_per_width
+ * 实用范围 知道槽间距为margin-right, 子标签左右对齐父元素
+ * @parm $n 没换多少个标签
+ * @parm $gutter 每个标签间的槽距
+ */
+/**
+ * 获取颜色map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取字体map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取层级map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取圆角map方法
+ * @parm $k 颜色的key值
+ */
+/**
+ * 获取圆角map方法
+ * @parm $k 颜色的key值
+ */
+/* line 9, ../sass/scjz/_common.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 12, ../sass/scjz/_common.scss */
+em, i {
+  font-style: normal;
+}
+
+/* line 16, ../sass/scjz/_common.scss */
+.clearfix {
+  clear: both;
+  content: '';
+}
+
+/*自定义浏览器前缀*/
+/* line 4, ../sass/login.scss */
+html {
+  height: 100%;
+}
+
+/* line 7, ../sass/login.scss */
+body {
+  background: url("../images/bgi_2.jpg") no-repeat center top;
+  font-family: "Microsoft Yahei", SimSun, Tahoma, arial, SimHei, sans-serif;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 14, ../sass/login.scss */
+.content {
+  width: 600px;
+  height: 560px;
+  position: absolute;
+  left: 50%;
+  margin-left: -300px;
+  top: 50%;
+  margin-top: -280px;
+  text-align: center;
+  z-index: 1100;
+}
+/* line 24, ../sass/login.scss */
+.content .loginModel {
+  width: 600px;
+  height: 360px;
+  overflow: hidden;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background: #fff;
+  margin-top: 67px;
+}
+/* line 32, ../sass/login.scss */
+.content .loginModel .navUl {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+/* line 36, ../sass/login.scss */
+.content .loginModel .navUl .navLi {
+  float: left;
+  display: inline;
+  width: 50%;
+  height: 50px;
+  line-height: 50px;
+  background: #c0c0c0;
+}
+/* line 42, ../sass/login.scss */
+.content .loginModel .navUl .navLi .navTitle {
+  color: #000;
+  cursor: pointer;
+}
+/* line 47, ../sass/login.scss */
+.content .loginModel .navUl .nav-active {
+  background: #fff;
+}
+/* line 50, ../sass/login.scss */
+.content .loginModel .navUl .formModel {
+  width: 600px;
+  height: 310px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+/* line 57, ../sass/login.scss */
+.content .loginModel .navUl .formModel li {
+  position: relative;
+  width: 70%;
+  margin: 0 auto 40px;
+  height: 50px;
+  border: 1px solid #b8b8b8;
+}
+/* line 63, ../sass/login.scss */
+.content .loginModel .navUl .formModel li label, .content .loginModel .navUl .formModel li p {
+  float: left;
+  display: inline;
+  display: block;
+  width: 15%;
+  height: 50px;
+  color: #5a5a5a;
+  font-size: 20px;
+}
+/* line 71, ../sass/login.scss */
+.content .loginModel .navUl .formModel li p {
+  width: 85%;
+  position: relative;
+}
+/* line 75, ../sass/login.scss */
+.content .loginModel .navUl .formModel li p input {
+  width: 90%;
+  height: 48px;
+  line-height: 48px;
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  outline: none;
+  font-size: 16px;
+}
+/* line 87, ../sass/login.scss */
+.content .loginModel .navUl .formModel li:hover {
+  border-color: #0f6596;
+  box-shadow: 0 0 10px #0f6596;
+}
+/* line 91, ../sass/login.scss */
+.content .loginModel .navUl .formModel li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: #0f6596;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+/* line 100, ../sass/login.scss */
+.content .loginModel .navUl .formModel li .errorTips {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  position: absolute;
+  top: 56px;
+  text-align: left;
+}
+/* line 109, ../sass/login.scss */
+.content .loginModel .navUl .formModel li .errorTips .successInfo {
+  display: none;
+  color: #008000;
+}
+/* line 113, ../sass/login.scss */
+.content .loginModel .navUl .formModel li .errorTips .wrongInfo {
+  display: none;
+  color: #be1313;
+}
+/* line 119, ../sass/login.scss */
+.content .loginModel .navUl .formModel li .activeError {
+  display: block;
+}
+/* line 123, ../sass/login.scss */
+.content .loginModel .navUl .formModel .firstLi {
+  margin-top: 35px;
+}
+/* line 126, ../sass/login.scss */
+.content .loginModel .navUl .formModel .numLogin {
+  margin-top: 35px;
+  height: 142px;
+}
+
+/* line 135, ../sass/login.scss */
+.bottomModel {
+  position: absolute;
+  width: 100%;
+  height: 37%;
+  background: #0f6596;
+  bottom: 0;
+  left: 0;
+}

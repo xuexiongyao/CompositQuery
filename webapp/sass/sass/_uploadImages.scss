@@ -1,0 +1,259 @@
+@charset "utf-8";
+
+/*****************图片批量上传公共插件样式*********************/
+
+.parentFileBox{
+    @include containerBox;
+    .fileBoxUl{
+        list-style-type: none;
+        margin: 0 74px;
+        padding: 0;
+        @include containerBox;
+        @include clearfix;
+        li{
+            margin:10px 5px;
+            padding: 10px;
+            @include size(180px,270px);
+            @include float(left);
+            @include prefix(border,radius,3px);
+            @include containerBox;
+            @include box-shadow(0 0 10px rgba(0,0,0,0.25));
+            .viewThumb{
+                @include size(180px,220px);
+                position: relative;
+                overflow: hidden;
+                img{
+                    @include square(100%);
+                }
+                //封面
+                .coverDiv{
+                    position: absolute;
+                    @include square(54px);
+                    left: 0;
+                    bottom: 0;
+                    background: url(../../common/uploadfiles/images/img_cover.png) no-repeat;
+                }
+            }
+            .diyCancel{//取消
+                @include positionDisplay;
+                @include square(32px);
+                top:0;
+                right:0;
+                cursor:pointer;
+                background: url(../../common/uploadfiles/images/x_alt.png) no-repeat;
+            }
+            .diySuccess{//确认
+                @extend .diyCancel;
+                background: url(../../common/uploadfiles/images/check_alt.png) no-repeat;
+            }
+            .diyFileName{
+                margin-top:10px;
+                font-weight:bold;
+                color: colors(primary);
+                @include text-overflow;
+                span.fileInfos{
+                    color:colors(textColor);
+                    font-weight:normal;
+                }
+            }
+            .diyBar{
+                @include positionDisplay;
+                @include square(100%);
+                top:0;
+                left:0;
+                background: lighten(colors(red),10%);
+                .diyProgressText {
+                    font-size:fontSize(base);
+                    text-align:center;
+                    color:colors(primary);
+                    position:relative;
+                    z-index:99;
+                }
+                .diyProgress {
+                    display: block;
+                    position:absolute;
+                    left:0;
+                    top:50%;
+                    margin-top:-12px;
+                    height:24px;
+                    background-color:colors(white);
+                    @include opacity(0.7);
+                    z-index:97;
+                }
+            }
+            &:hover{
+                @include box-shadow(0 0 10px colors(red) inset);
+            }
+        }
+        #add_file{
+            width:170px;
+            cursor:pointer;
+            @include border(5px,solid,#cecece);
+            background: url(../../common/uploadfiles/images/add_image.png) no-repeat center;
+            &:hover{
+                @include box-shadow(0 0 10px rgba(0,0,0,0.25));
+            }
+        }
+        .diyUploadHover:hover .diyCancel{
+            display: block;
+        }
+    }
+    .diyButton {
+        width:100%;
+        margin:5px 0;
+        @include text-vertical-center(20px);
+        text-align:center;
+        a{
+            padding:5px 10px;
+            background-color:colors(primary);
+            color:colors(white);
+            font-size:fontSize(small);
+            text-decoration:none;
+            @include prefix(border,radius,3px);
+            &:hover {
+                background-color:darken(colors(primary),20%);
+            }
+        }
+    }
+}
+.avi_diy_bg,.txt_diy_bg,.doc_diy_bg,.zip_diy_bg,.csv_diy_bg,.xls_diy_bg,.mp3_diy_bg,.pdf_diy_bg,.rar_diy_bg {
+    background-position:center;
+    background-repeat:no-repeat;
+}
+.avi_diy_bg {
+    background-image:url(../../common/uploadfiles/images/filebg/avi.png);
+}
+.txt_diy_bg {
+    background-image:url(../../common/uploadfiles/images/filebg/txt.png);
+}
+.doc_diy_bg {
+    background-image:url(../../common/uploadfiles/images/filebg/doc.png);
+}
+.zip_diy_bg {
+    background-image:url(../../common/uploadfiles/images/filebg/zip.png);
+}
+.csv_diy_bg {
+    background-image:url(../../common/uploadfiles/images/filebg/csv.png);
+}
+.xls_diy_bg {
+    background-image:url(../../common/uploadfiles/images/filebg/xls.png);
+}
+.mp3_diy_bg {
+    background-image:url(../../common/uploadfiles/images/filebg/mp3.png);
+}
+.pdf_diy_bg {
+    background-image:url(../../common/uploadfiles/images/filebg/pdf.png);
+}
+.rar_diy_bg {
+    background-image:url(../../common/uploadfiles/images/filebg/rar.png);
+}
+
+/*展示页面css*/
+.get-more{
+    width:100%;
+    font-size: fontSize(base);
+    color: colors(primary);
+    margin:30px 0 20px;
+    cursor: pointer;
+    @include text-align(center);
+}
+/*图片弹出窗口*/
+#pic_details_panel{
+    overflow: hidden;
+    @include clearfix;
+    .img-area-left{//图片区域
+        @include float(left);
+        @include size(750px,520px);
+        background: #404040;
+        position: relative;
+        @include text-align(center);
+        img{
+            width:auto;
+            height:100%;
+            max-width:750px;
+        }
+        a{
+            @include positionDisplay(absolute,block);
+            @include text-vertical-center(520px);
+            top:0;
+            cursor: pointer;
+            width:40px;
+            padding: 0 10px;
+            display: none;
+        }
+        a.prev{
+            left:0;
+            background:url(../../common/uploadfiles/images/prev.png) no-repeat center;
+        }
+        a.next{
+            right:0;
+            background:url(../../common/uploadfiles/images/next.png) no-repeat center;
+        }
+        &:hover a{
+            display: block;
+        }
+    }
+    .infos-area-right{//信息展示区域
+        @include float(left);
+        @include size(348px,520px);
+        position: relative;
+        ul{
+            //background: #3f973c;
+            margin:30px;
+            padding:0;
+            list-style-type: none;
+            li{
+                @include clearfix;
+                margin-bottom:10px;
+                label{
+                    @include float(left);
+                    margin-right:10px;
+                    width: 56px;
+                    min-height:19px;
+                    font-weight:bold;
+                    color: colors(textColor);
+                }
+                p{
+                    margin:0;
+                    @include float(left);
+                    input[type=checkbox]{
+                        vertical-align: -3px;
+                    }
+                    textarea{
+                        overflow: auto;
+                        resize: none;
+                        outline: none;
+                        @include prefix(border,radius,3px);
+                        border-color:colors(borderColor);
+                        //&:focus{
+                        //    border-color: colors(borderFocus);
+                        //    @include box-shadow(0 0 5px colors(borderFocus));
+                        //}
+                    }
+                }
+            }
+        }
+        .btn-tmp{
+            @include text-align(center);
+            margin:20px 0;
+        }
+        .tips{
+            position: absolute;
+            bottom: 30px;
+            right:30px;
+            @include text-vertical-center(24px);
+            @include text-align(right);
+            color:colors(red);
+        }
+        a.closeWin{
+            position: absolute;
+            top: 8px;
+            right:8px;
+            cursor: pointer;
+            i{
+                font-size: fontSize(large);
+                color: colors(primary);
+            }
+        }
+    }
+}

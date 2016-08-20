@@ -1,0 +1,91 @@
+@charset "utf-8";
+//Variables
+
+//margin | padding | border-radius| border-width...
+//-----------------------------------
+
+//四个参数（上，右，下，左）
+@mixin attr-all-around($attr,$top,$right,$bottom,$left){
+    #{$attr}:$top $right $bottom $left;
+}
+
+//三个参数(上，左右,下)
+@mixin attr-three-direction($attr,$top,$leftRight,$bottom){
+    #{$attr}:$top $leftRight $bottom;
+}
+
+//两个参数(上下，左右)
+@mixin attr-two-direction($attr,$topBottom,$leftRight){
+    #{$attr}:$topBottom $leftRight;
+}
+
+//margin(padding\border)-top|left|right|bottom
+//------------------------------------
+@mixin attr-fx($attr,$fx,$val){
+    #{$attr}-#{$fx}:$val;
+}
+
+//margin | padding | border
+//-------------------------------------
+@mixin attr($attr,$var:0){
+    #{$attr}: $var;
+}
+
+//margin | padding | border 0
+@mixin attrMarginPaddingBorder($var:0){
+    margin: $var;
+    padding: $var;
+    border: $var;
+}
+
+%attrMarginPaddingBorder{
+    @include attrMarginPaddingBorder;
+}
+
+//margin | padding 0
+@mixin attrMarginPadding($var:0){
+    margin: $var;
+    padding:$var;
+}
+
+%attrMarginPadding{
+    @include attrMarginPadding;
+}
+
+//margin | border 0
+@mixin attrMarginBorder($var:0){
+    margin: $var;
+    border:$var;
+}
+%attrMarginBorder{
+    @include attrMarginBorder;
+}
+
+//padding | border 0
+@mixin attrPaddingBorder($var:0){
+    padding: $var;
+    border:$var;
+}
+%attrMarginBorder{
+    @include attrMarginBorder;
+}
+
+//position relative  and  overflow hidden
+@mixin containerBox($var1:relative,$var2:hidden){
+    position: $var1;
+    overflow: $var2;
+}
+
+%containerBox{
+    @include containerBox;
+}
+
+//position：absolute and  display：none
+@mixin positionDisplay($var1:absolute,$var2:none){
+    position: $var1;
+    display: $var2;
+}
+
+%positionDisplay{
+    @include positionDisplay;
+}

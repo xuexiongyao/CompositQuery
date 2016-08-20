@@ -1,0 +1,311 @@
+@charset "UTF-8";
+/***********************************/
+/**
+ * 获取颜色map方法
+ * @param $key 颜色的key值
+ */
+/**
+ * 获取字体map方法
+ * @param $key 颜色的key值
+ */
+/**
+ * 获取字体大小map方法
+ * @param $key 颜色的key值
+ */
+/**
+ * 获取行高map方法
+ * @param $key 颜色的key值
+ */
+/**
+ * 获取圆角map方法
+ * @param $key 颜色的key值
+ */
+/**
+ * 获取z-index map方法
+ * @param $key 颜色的key值
+ */
+/**!
+ * @author christ
+ * 本配置基于sass框架compass,在运用时请注意是否安装sass,compass
+ */
+/*按钮移入渐变*/
+/*disabled btn*/
+/*selected button*/
+/* line 5, ../sass/sass/mixins/_scroll.scss */
+::-webkit-scrollbar {
+  background-color: #fff;
+  width: 5px;
+  height: 10px;
+}
+
+/* line 11, ../sass/sass/mixins/_scroll.scss */
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+/* line 15, ../sass/sass/mixins/_scroll.scss */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.65);
+}
+
+/***********************************/
+/****************公共页面基本框架样式**********************/
+/* line 5, ../sass/sass/_common.scss */
+body {
+  background: url("../framework/default/images/general_bg.jpg");
+  visibility: hidden;
+}
+
+/* line 9, ../sass/sass/_common.scss */
+textarea {
+  overflow: auto;
+  resize: none;
+  outline: none;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-color: #ccc;
+}
+
+/* line 16, ../sass/sass/_common.scss */
+label {
+  cursor: pointer;
+}
+
+/* line 19, ../sass/sass/_common.scss */
+.main {
+  margin: 30px auto 0;
+  padding: 1px 0 30px;
+  width: 1198px;
+  height: auto;
+  background-color: #fff;
+}
+
+/* line 27, ../sass/sass/_common.scss */
+.content-area {
+  width: 1100px;
+  margin: 40px auto 0;
+  text-align: center;
+  *zoom: 1;
+  font-size: 14px;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+.content-area:before, .content-area:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+.content-area:after {
+  clear: both;
+  overflow: hidden;
+}
+/* line 33, ../sass/sass/_common.scss */
+.content-area .item {
+  margin: 0 20px 10px;
+  width: 510px;
+  line-height: 22px;
+  float: left;
+  _display: inline;
+  *zoom: 1;
+}
+/* line 38, ../sass/sass/_common.scss */
+.content-area .item textarea {
+  height: 60px;
+}
+/* line 41, ../sass/sass/_common.scss */
+.content-area .item a {
+  float: left;
+  _display: inline;
+}
+/* line 44, ../sass/sass/_common.scss */
+.content-area .item .control-btn {
+  float: right;
+  _display: inline;
+  margin-right: 3px;
+}
+/* line 47, ../sass/sass/_common.scss */
+.content-area .item .control-btn i {
+  line-height: 20px;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+.content-area .item:before, .content-area .item:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+.content-area .item:after {
+  clear: both;
+  overflow: hidden;
+}
+/* line 53, ../sass/sass/_common.scss */
+.content-area .item-full {
+  width: 1060px;
+}
+/* line 56, ../sass/sass/_common.scss */
+.content-area .item-title {
+  margin: 0 0 20px;
+  padding-bottom: 5px;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+/* line 61, ../sass/sass/_common.scss */
+.content-area .item-title .pro {
+  width: 100%;
+  margin: 0;
+  font-size: 18px;
+  text-align: left;
+}
+/* line 68, ../sass/sass/_common.scss */
+.content-area .pro {
+  display: inline-block;
+  vertical-align: top;
+  *vertical-align: auto;
+  zoom: 1;
+  *dispaly: inline;
+  width: 150px;
+  text-align: right;
+  margin-right: 20px;
+  color: #5a5a5a;
+  font-weight: bold;
+  float: left;
+  _display: inline;
+}
+/* line 76, ../sass/sass/_common.scss */
+.content-area .pro i {
+  color: #ed4848;
+  margin-right: 5px;
+}
+/* line 82, ../sass/sass/_common.scss */
+.content-area .radio-box {
+  text-align: left;
+}
+/* line 84, ../sass/sass/_common.scss */
+.content-area .radio-box input {
+  vertical-align: -2px;
+}
+
+/* line 89, ../sass/sass/_common.scss */
+.btn-area {
+  width: 1100px;
+  margin: 40px auto 0;
+  text-align: center;
+  font-size: 14px;
+}
+/* line 94, ../sass/sass/_common.scss */
+.btn-area a.easyui-linkbutton {
+  margin: 0 10px;
+}
+
+/* line 98, ../sass/sass/_common.scss */
+.clear {
+  clear: both;
+}
+
+/* line 103, ../sass/sass/_common.scss */
+.clear-border {
+  border: 1px solid #fff;
+}
+
+/* line 106, ../sass/sass/_common.scss */
+#loadingMsk {
+  font-family: "SimSun";
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+}
+/* line 114, ../sass/sass/_common.scss */
+#loadingMsk .loadingPage {
+  background: #fff;
+  text-align: center;
+  width: 300px;
+  height: 100px;
+  line-height: 100px;
+  position: absolute;
+  left: 50%;
+  margin-left: -150px;
+  top: 50%;
+  margin-top: -50px;
+}
+/* line 124, ../sass/sass/_common.scss */
+#loadingMsk .loadingPage img {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *dispaly: inline;
+}
+/* line 127, ../sass/sass/_common.scss */
+#loadingMsk .loadingPage span {
+  margin-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+/******************弹出iframe(url)窗口公共样式*********************/
+/* line 5, ../sass/sass/_frameWindowCommon.scss */
+.frame-window {
+  margin: 30px auto 0;
+  padding-bottom: 30px;
+  height: auto;
+  width: 100%;
+  background: #fff;
+}
+/* line 11, ../sass/sass/_frameWindowCommon.scss */
+.frame-window .frame-window-con {
+  width: 100%;
+  margin: 40px auto 0;
+  font-size: 12px;
+  *zoom: 1;
+}
+/* line 18, ../sass/sass/mixins/_clearfix.scss */
+.frame-window .frame-window-con:before, .frame-window .frame-window-con:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/sass/mixins/_clearfix.scss */
+.frame-window .frame-window-con:after {
+  clear: both;
+  overflow: hidden;
+}
+/* line 16, ../sass/sass/_frameWindowCommon.scss */
+.frame-window .frame-window-con .item {
+  margin: 10px 0 0;
+  float: left;
+  _display: inline;
+}
+/* line 20, ../sass/sass/_frameWindowCommon.scss */
+.frame-window .frame-window-con .pro {
+  display: inline-block;
+  vertical-align: top;
+  *vertical-align: auto;
+  zoom: 1;
+  *dispaly: inline;
+  text-align: right;
+  margin-right: 20px;
+  width: 100px;
+  color: #5a5a5a;
+  font-weight: bold;
+}
+/* line 27, ../sass/sass/_frameWindowCommon.scss */
+.frame-window .frame-window-con .pro i {
+  color: #ed4848;
+  margin-right: 5px;
+}
+/* line 33, ../sass/sass/_frameWindowCommon.scss */
+.frame-window .frame-window-btn {
+  width: 100%;
+  margin: 10px 0;
+  text-align: center;
+}
+/* line 37, ../sass/sass/_frameWindowCommon.scss */
+.frame-window .frame-window-btn a.easyui-linkbutton {
+  margin: 0 10px;
+}

@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+//functions
+
+/**
+ * 获取颜色map方法
+ * @param $key 颜色的key值
+ */
+@function colors($key){
+    @if not map_has_key($color,$key){
+        @warn " 属性 '#{$key}' 在 '$color'中没找到。";
+    }
+    @return map_get($color,$key);
+}
+
+/**
+ * 获取字体map方法
+ * @param $key 颜色的key值
+ */
+@function fontFamily($key){
+    @if not map-has-key($font-family, $key){
+        @warn "属性 `#{$key}` 在 `$font-family` 没找到。";
+    }
+    @return map-get($font-family, $key);
+}
+
+/**
+ * 获取字体大小map方法
+ * @param $key 颜色的key值
+ */
+@function fontSize($key){
+    @if not map-has-key($font-size, $key){
+        @warn "属性 `#{$key}` 在 `$font-size` 没找到。";
+    }
+    @return map-get($font-size, $key);
+}
+
+/**
+ * 获取行高map方法
+ * @param $key 颜色的key值
+ */
+@function lineHeight($key){
+    @if not map-has-key($ling-height, $key){
+        @warn "属性 `#{$key}` 在 `$ling-height` 没找到。";
+    }
+    @return map-get($ling-height, $key);
+}
+
+/**
+ * 获取圆角map方法
+ * @param $key 颜色的key值
+ */
+@function radius($key){
+    @if not map-has-key($radius, $key){
+        @warn "属性 `#{$key}` 在 `$radius` 没找到。";
+    }
+    @return map-get($radius, $key);
+}
+
+/**
+ * 获取z-index map方法
+ * @param $key 颜色的key值
+ */
+@function zindex($key){
+    @if not map-has-key($zIndex, $key){
+        @warn "属性 `#{$key}` 在 `$zIndex` 没找到。";
+    }
+    @return map-get($zIndex, $key);
+}

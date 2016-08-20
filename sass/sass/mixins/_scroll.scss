@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+//自定义滚动条scroll
+//------------------------------
+::-webkit-scrollbar {
+    background-color: colors(white);
+    width: 5px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: colors(white);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.65);
+    //@include attr-fx(border,radius,5px);
+}

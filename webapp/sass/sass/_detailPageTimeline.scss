@@ -1,0 +1,248 @@
+@charset "utf-8";
+
+/****************详情页面  时间轴风格样式*******************/
+//详情页面样式  实有人口 | 实有房屋  |标准地址 | 实有单位
+
+//fix窗口样式
+.info-nav {
+    position: fixed;
+    top: 50px;
+    width: 200px;
+    z-index: zindex(navbar-fixed);
+    display: none;
+    .business-btn {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        width: 100%;
+        li {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: fontSize(base);
+            a {
+                padding: 3px 0;
+                width: 150px;
+            }
+        }
+    }
+    .nav-btn {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        margin-top: 20px;
+        .slider {
+            position: absolute;
+            left: 20px;
+        }
+        .btn {
+            position: absolute;
+            left: 50px;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            li {
+                cursor: pointer;
+                font-weight: bold;
+                color: colors(textColor);
+                margin-top: 5px;
+                font-size: fontSize(base);
+            }
+            .active {
+                background-color: colors(lightBlueBg);
+            }
+        }
+    }
+}
+
+//详情主面板样式
+.info-main {
+    @extend .main;
+    height: auto;
+    @include clearfix;
+    .base-info {
+        @include clearfix;
+        height: auto;
+        width: 960px;
+        border-right: 1px solid colors(borderColor);
+        padding-bottom: 40px;
+        .photo-info {
+            float: left;
+            width: 260px;
+            height: 300px;
+            position: relative;
+            .img-div {
+                position: absolute;
+                top: -20px;
+                left: 36px;
+                border: 1px colors(borderColor) solid;
+                img {
+                    width: 185px;
+                    height: 230px;
+                }
+            }
+            .edit-div {
+                position: absolute;
+                top: 220px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .person-info {
+            float: left;
+            width: 700px;
+            height: auto;
+            margin-top: 25px;
+            .title {
+                @include clearfix;
+                width: 100%;
+                .name-info {
+                    float: left;
+                    margin-top: 10px;
+                    .name {
+                        font-size: fontSize(h2);
+                        font-weight: bold;
+                    }
+                }
+                .person-btn {
+                    float: right;
+                    margin-right: 30px;
+                }
+            }
+            .content {
+                @include clearfix;
+                margin-top: 30px;
+                width: 100%;
+                .item {
+                    float: left;
+                    min-height: 30px;
+                    line-height:30px;
+                    height:auto;
+                    border-bottom: 1px dashed colors(borderColor);
+                    .pro {
+                        @include inline-block(baseline);
+                        width: 80px;
+                        font-size: fontSize(small);
+                        font-weight: bold;
+                        color: colors(grayBgcolor);
+                        position: relative;
+                        top:3px;
+                        i{
+                            color:colors(red);
+                            margin-right:5px;
+                        }
+                    }
+                    .val {
+                        @extend .pro;
+                        vertical-align: middle;
+                        width: 240px;
+                    }
+                    .clear-border {
+                        border: 1px solid colors(white);
+                    }
+                }
+                //检查周期
+                .item-title{
+                    border-bottom: 1px solid colors(borderColor);
+                    .pro{
+                        font-weight: bold;
+                        font-size: fontSize(base);
+                        color:colors(black);
+                        margin:10px 0 0;
+                    }
+                }
+            }
+        }
+    }
+    .other-info {
+        @include clearfix;
+        height: auto;
+        width: 960px;
+        border-right: 1px solid colors(borderColor);
+        .title {
+            width: 100%;
+            @include clearfix;
+            .tip {
+                position: relative;
+                left: -10px;
+                float: left;
+                width: 175px;
+                height: 35px;
+                line-height: 35px;
+                text-align: center;
+                background-color: colors(primary);
+                color: colors(white);
+                font-size: fontSize(large);
+                font-family: fontFamily(yh);
+                &:before {
+                    @include triangle(10px, $bgColor, darken(colors(primary), 15%), up-right, false, false);
+                }
+            }
+            .edit-btn {
+                float: right;
+                margin-right: 30px;
+                margin-bottom: 0;
+            }
+        }
+        .content {
+            @include size(900px, auto);
+            margin: 25px auto 40px;
+            //表单样式
+            .form-content{
+                list-style-type: none;
+                margin:0;
+                padding:5px 0;
+                @include clearfix;
+                li{
+                    background-color: #eef1f6;
+                    width:440px;
+                    @include float(left);
+                    line-height: 22px;
+                    min-height:22px;
+                    height:auto;
+                    margin-bottom:10px;
+                    @include clearfix;
+                    label{
+                        cursor: default;
+                        display: inline-block;
+                        width:135px;
+                        margin-right: 15px;
+                        @include float(left);
+                        @include text-align(right);
+                        color: colors(textColor);
+                        font-weight: bold;
+                    }
+                    .textbox{
+                        background: transparent;
+                        border:1px solid #eef1f6;
+                    }
+                    input{
+                        background: transparent;
+                    }
+                }
+                li:nth-child(2n){
+                    margin-left:20px;
+                }
+                li.li-full{
+                    width:900px;
+                    margin: 0 0 10px!important;
+                }
+            }
+        }
+    }
+}
+
+//详情页面  基本信息修改样式
+.info-edit{
+    .base-info {
+        border: none;
+        width:auto;
+        .person-info{
+            margin-left: 40px;
+            .item{
+                span.pro-right{
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+}

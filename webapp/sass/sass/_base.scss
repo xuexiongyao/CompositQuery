@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/**************主页面框架样式*******************/
+
+//main框架
+.main {
+    margin: 30px auto 0;
+    padding: 1px 0 30px;
+    width: 1198px;
+    height: auto;
+    //@include border(1px, solid, colors(borderColor));
+    background-color: colors(white);
+}
+
+//地址下拉框  更多按钮  样式
+.address-more {
+    width: 100%;
+    @include text-vertical-center(15px);
+    @include text-align(center);
+    cursor: pointer;
+    color: colors(primary);
+    font-size: fontSize(base);
+    font-weight: bold;
+    vertical-align: middle;
+    background-color: darken(colors(white), 10%);
+    &:hover {
+        background-color: darken(colors(white), 30%);
+    }
+}

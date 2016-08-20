@@ -1,0 +1,21 @@
+src/main/webapp
+	#####公共组件########
+	--common 公共组件
+		--dict 字典目录，系统启动时生成的字典存放的目录
+		--easyui easyui组件
+		--easyuiDiy easyui自定义样式
+		--gridly 拖拽插件
+
+	--framework 框架、登陆、首页组件
+	
+	#####业务相关文件######
+	--css 业务样式
+	
+	--images 业务图片
+	
+	--js 业务js
+	
+	--WEB-INF 前端页面
+		--pages 前端jsp页面
+			--commonInclude.jsp 包含了公共css文件，放在jsp的头部
+			--commonIncludeJs.jsp 包含了公共js文件，为了加快页面加载速度，所以请放到jsp底部，</bady>标签后面，业务相关js再放到此js后面

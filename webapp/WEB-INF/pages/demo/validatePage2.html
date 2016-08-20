@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="renderer" content="webkit"><!--默认360极速模式-->
+    <link rel="stylesheet" href="http://static.jwzh.com:7777/jwzh/common/easyuiDiy/easyui.css">
+    <link rel="stylesheet" href="http://static.jwzh.com:7777/jwzh/common/easyuiDiy/icon.css">
+    <link rel="stylesheet" href="http://static.jwzh.com:7777/jwzh/framework/default/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://static.jwzh.com:7777/jwzh/common/datepicker/skin/christ/datepicker.css">
+    <link rel="stylesheet" href="http://static.jwzh.com:7777/jwzh/stylesheets/newItemStyle.css">
+    <script src="http://static.jwzh.com:7777/jwzh/common/easyui/jquery.min.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/easyui/jquery.dragsort-0.5.2.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/easyui/jquery.easyui.min.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/easyui/locale/easyui-lang-zh_CN.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/easyui/jquery.easyui.extend.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/easyui/jquery.easyui.extend.validatebox.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/easyui/jquery.easyui.extend.tabs.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/easyui/jquery.form.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/js/tools.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/js/business.tools.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/js/windowTopPage.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/js/messenger.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/js/common.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/js/ajax.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/datepicker/WdatePicker.js"></script>
+</head>
+<body style="margin: 50px;">
+
+<div class="container">
+    <!--组件样式 2:2-->
+    <h2>Item Style 2/2</h2>
+    <form action="#" id="dataform" method="post">
+        <ul class="item-container">
+            <li class="item-full">
+                <p class="pro-fullTwo">性别</p>
+                <div class="ipt-fullTwo">
+                    <input type="text" name="xb" id="xb" value="1" class="easyui-combobox"
+                           data-options="
+                       url: staticPath + '/common/dict/xb.js',
+                       dataFilter: '1|2|3|4',
+                       required:true,
+                       method:'get',
+					   valueField:'id',
+					   textField:'text',
+					   selectOnNavigation:false,
+                       fit: true,
+					   onChange: xbOnchange">
+                    <span class="edit_word"></span>
+                </div>
+            </li>
+
+            <li class="item-full">
+                <p class="pro-fullTwo">行政区划列表（本市）：</p>
+                <div class="ipt-fullTwo">
+                    <input type="text" name="xzqh11" id="xzqh11" class="easyui-combobox"
+                           data-options="
+                            url: staticPath + '/common/dict/D_BZ_XZQHLIST_MUNICIPAL.js',
+                            prompt:'过滤掉以00结尾的',
+                            dataFilter:'.*[^00]$',
+                            required:true,
+							method:'get',
+							valueField:'id',
+							textField:'text',
+							selectOnNavigation:false,
+                            fit: true,">
+                    <span class="edit_word"></span>
+                </div>
+            </li>
+
+            <li class="item-full">
+                <p class="pro-fullTwo">行政区划列表（本省）：</p>
+                <div class="ipt-fullTwo">
+                    <input type="text" name="xzqh12" id="xzqh12" class="easyui-combobox"
+                           data-options="
+                       url: staticPath + '/common/dict/BD_D_XZQH.js',
+                       prompt:'过滤掉以00结尾的',
+                       dataFilter:'.*[^00]$',
+                       required:true,
+					   method:'get',
+					   valueField:'id',
+					   textField:'text',
+					   selectOnNavigation:false,
+					   fit:true">
+                    <span class="edit_word"></span>
+                </div>
+            </li>
+
+            <li class="item-full">
+                <p class="pro-fullTwo">行政区划列表（四川省）：</p>
+                <div class="ipt-fullTwo">
+                    <input type="text" name="xzqh13" id="test" class="easyui-combobox"
+                           data-options="
+                       prompt:'过滤掉除四川省以为的其他省份',
+                       method:'get',
+                       dataFilter:'^51',
+                       required:true,
+                       valueField:'id',
+                       textField:'text',
+                       selectOnNavigation:false,
+                       fit:true">
+                    <span class="edit_word"></span>
+                </div>
+            </li>
+
+            <li class="item-full">
+                <p class="pro-fullTwo">行政区划列表（全国）：</p>
+                <div class="ipt-fullTwo">
+                    <input type="text" name="xzqh13" id="xzqh14" class="easyui-combobox"
+                           data-options="
+                       url: staticPath + '/common/dict/XZQHLIST.js',
+                       prompt:'无过滤条件',
+                       method:'get',
+                       dataFilter:'',
+                       required:true,
+                       valueField:'id',
+                       textField:'text',
+                       selectOnNavigation:false,
+                       fit:true">
+                    <span class="edit_word"></span>
+                </div>
+            </li>
+
+            <li class="item-full">
+                <p class="pro-fullTwo">行政区划树（本市）：</p>
+                <div class="ipt-fullTwo">
+                    <input type="text" name="xzqh21" id="xzqh21" class="easyui-combotree"
+                           data-options="
+                       url: staticPath + '/common/dict/D_BZ_XZQH_MUNICIPAL.js',
+                       onlyLeaf:true,
+                       dataFilter:'',
+                       required:true,
+                       panelWidth:'1008',
+					   method:'get',
+                       editable:true,
+                       multiple:true,
+                       lines:true,
+                       fit:true">
+                    <span class="edit_word"></span>
+                </div>
+            </li>
+
+            <li class="item-full">
+                <p class="pro-fullTwo">无引号：</p>
+                <div class="ipt-fullTwo">
+                    <input type="text" name="noMark" id="noMark" class="easyui-textbox" style="width: 100%;"
+                           data-options="required:true,charSet:'upper',validType:['noMark','maxLength[10]']"/>
+                    <span class="edit_word"></span>
+                </div>
+            </li>
+
+            <!--<li class="item-full">-->
+            <!--<p class="pro-fullTwo">车辆类型：</p>-->
+            <!--<div class="ipt-fullTwo">-->
+            <!--<input type="text" name="xzqh23" id="xzqh23" onclick="" class="easyui-textbox"-->
+            <!--data-options="-->
+            <!--url: staticPath + '/common/dict/BD_D_CLLX.js',-->
+            <!--prompt:'点击延时解析',-->
+            <!--onlyLeaf:true,-->
+            <!--dataFilter:'',-->
+            <!--multiple:false,-->
+            <!--required:true,-->
+            <!--panelWidth:1008,-->
+            <!--method:'get',-->
+            <!--editable:true,-->
+            <!--lines:true,-->
+            <!--fit:true">-->
+            <!--<span class="edit_word"></span>-->
+            <!--</div>-->
+            <!--</li>-->
+
+            <li class="item-two">
+                <p class="pro">复选框：</p>
+                <div class="ipt">
+                    <label><input type="checkbox" name="checkbox" value="checkbox1" id="checkbox1"/>checkbox1</label>
+                    <label><input type="checkbox" name="checkbox" value="checkbox2" id="checkbox2"/>checkbox2</label>
+                    <label><input type="checkbox" name="checkbox" value="checkbox3" id="checkbox3"/>checkbox3</label>
+                    <span class="edit_word"></span>
+                </div>
+            </li>
+
+            <li class="item-two">
+                <p class="pro">单选框：</p>
+                <div class="ipt">
+                    <label><input type="radio" name="rad" value="radio1" id="radio1"/>radio1</label>
+                    <label><input type="radio" name="rad" value="radio2" id="radio2"/>radio2</label>
+                    <label><input type="radio" name="rad" value="radio3" id="radio3"/>radio3</label>
+                    <span class="edit_word"></span>
+                </div>
+            </li>
+        </ul>
+
+        <div class="btn-area">
+            <input type="submit" value="提交">
+            <input type="reset" value="reset"/>
+        </div>
+    </form>
+
+    <div class="h-blank-noborder"></div>
+
+    <a href="javascript:;" title="做表单字段验证，当所有字段都有效的时候返回true"
+       class="easyui-tooltip easyui-linkbutton"
+       onclick="$.messager.alert({title:'提示',content:$('#dataform').form('validate')})">
+        validate
+    </a>
+
+    <a href="javascript:;" title="启用验证"
+       class="easyui-tooltip easyui-linkbutton"
+       onclick="$('#dataform').form('enableValidation').form('validate');">
+        enableValidation
+    </a>
+
+    <a href="javascript:;" title="禁用验证"
+       class="easyui-tooltip easyui-linkbutton"
+       onclick="$('#dataform').form('disableValidation');">
+        disableValidation
+    </a>
+
+    <a href="javascript:;" title="只读"
+       class="easyui-tooltip easyui-linkbutton"
+       onclick="formReadonly('dataform', true)">
+        readonly
+    </a>
+
+    <a href="javascript:;" title="解除只读"
+       class="easyui-tooltip easyui-linkbutton"
+       onclick="formReadonly('dataform',false)">
+        notReadonly
+    </a>
+
+    <a href="javascript:;" title="获取表单数据"
+       class="easyui-tooltip easyui-linkbutton"
+       onclick="getFormData(document.forms['dataform'])">
+        getFormData
+    </a>
+
+    <a href="javascript:;" title="取取指定表单可提交的数据"
+       class="easyui-tooltip easyui-linkbutton"
+       onclick="getFormDataByID('dataform')">
+        getFormData2
+    </a>
+
+    <a href="javascript:;" title="性别 readonly"
+       class="easyui-tooltip easyui-linkbutton"
+       onclick="setInputReadonly('xb', true)">
+        性别 readonly
+    </a>
+
+    <a href="javascript:;" title="性别 notreadonly"
+       class="easyui-tooltip easyui-linkbutton"
+       onclick="setInputReadonly('xb', false)">
+        性别 notreadonly
+    </a>
+
+    <a href="javascript:;" title="性别 disabled"
+       class="easyui-tooltip easyui-linkbutton"
+       onclick="setInputDisabled('xb', true)">
+        性别 disabled
+    </a>
+
+    <a href="javascript:;" title="性别 enable"
+       class="easyui-tooltip easyui-linkbutton"
+       onclick="setInputDisabled('xb', false)">
+        性别 enable
+    </a>
+
+    <a href="javascript:;" title="性别必填"
+       class="easyui-tooltip easyui-linkbutton"
+       onclick="setComboboxRequired('xb', true)">
+        性别必填
+    </a>
+
+    <div class="h-blank-noborder"></div>
+
+    <a href="javascript:;" title="性别不必填"
+       class="easyui-tooltip easyui-linkbutton"
+       onclick="setComboboxRequired('xb', false)">
+        性别不必填
+    </a>
+
+    <a href="javascript:;" title="无引号改变校验规则"
+       class="easyui-tooltip easyui-linkbutton"
+       onclick="changeValidation()">
+        无引号 改变校验规则
+    </a>
+
+    <a href="javascript:;" class="easyui-linkbutton"
+       onclick="customValidation()">
+        单个校验是否通过
+    </a>
+
+    <a href="javascript:;" class="easyui-tooltip easyui-linkbutton" title="清空某个combobox"
+       onclick="comboBoxClear()">
+        清空字典
+    </a>
+
+    <a href="javascript:;" class="easyui-tooltip easyui-linkbutton" title="重新加载字典"
+       onclick="comboBoxReload()">
+        重新加载字典
+    </a>
+
+    <a href="javascript:;" class="easyui-tooltip easyui-linkbutton" title="获取表单数据到span"
+       onclick="getFormDataToSpan('dataform')">
+        获取表单数据到span
+    </a>
+
+
+
+    <!--返回主页-->
+    <a id="backHome" href="http://static.jwzh.com:7777/jwzh/WEB-INF/pages/demo/index.html"
+       style="position: fixed;right: 10px;top: 320px;width: 60px;height: 100px;line-height: 100px;background: green;text-align: center;cursor: pointer;color: #fff;padding: 0 10px;text-decoration: none;">
+        返回主页
+    </a>
+
+
+</div>
+<script>
+    var window_type = 'open_url';
+    $(function () {
+        clickShowPanel();//点击下拉框show panel
+        bodyOnload();
+
+    });
+
+    var staticPath = 'http://static.jwzh.com:7777/jwzh';
+
+    initComboBox('test', staticPath + '/common/dict/BD_D_XZQH.js');
+    //    initComboBox('xzqh14', staticPath + '/common/dict/BD_D_XZQH.js');
+    //    initComboBox('xzqh15', staticPath + '/common/dict/BD_D_XZQH.js');
+
+    //改变性别
+    function xbOnchange(newValue, oldValue) {
+        $.messager.alert({
+            title: '提示',
+            content: "性别值由：" + oldValue + " 变为：" + newValue
+        });
+    }
+
+    //延时解析
+    function dealyParse() {
+        $('#xzqh23').addClass('easyui-combotree');
+        $.parser.parse('#xzqh23');
+        $.parser.onComplete = function (e) {
+            alert("comlpete2");
+        }
+    }
+
+    //页面一加载就执行
+    function bodyOnload() {
+//        uploadFileImageView('TESTImage', '8888888811', 'uploadFileImageDiv', 300, 375, contextPath + '/images/bzdz/building/building.jpg'); // 附件图片多张显示
+        //uploadFileImageView('TESTImage', '8888888811', 'uploadFileImageDiv', 300, 375, contextPath + '/common/skin/images/empty_ryzp.jpg'); // 附件图片多张显示
+        //uploadFileImageView('TESTImage', '88888888', 'uploadFileImageDiv', 300, 375); // 附件图片多张显示
+        $('#dataform').form({
+            onSubmit: function () {
+                //alert($(this).form('validate'));
+                return $(this).form('validate');
+            },
+            success: function (data) {
+                alert(data);
+            }
+        });
+    }
+
+    //无引号改变校验规则
+    function changeValidation() {
+        $('#noMark').textbox({required: false, validType: ['phone']});
+    }
+
+    //单个校验是否通过
+    function customValidation() {
+        var a = $('#xb').combo("isValid");
+        var b = $('#xzqh13').combo("isValid");
+        var c = $('#noMark').textbox("isValid");
+        $.messager.alert({
+            title: '提示',
+            msg:[
+                "性别校验 = " + a,
+                "行政区划校验 = " + b,
+                "无引号校验 = " + c
+            ]
+        });
+    }
+
+    //清空combobox
+    function comboBoxClear() {
+        $('#xzqh13').combobox('loadData', []);
+    }
+
+    //combobox重新加载字典
+    function comboBoxReload() {
+        $('#xzqh13').combobox('reload', staticPath + '/common/dict/XZQHLIST.js')
+    }
+
+    //表单数据填充到span
+    function getFormDataToSpan(formID) {
+        var inputSelector = $('#' + formID + ' input:not(:button)');
+        $.each(inputSelector, function (index, object) {
+            var element = $(object);
+            var _type = element.attr('type');
+            var _name = element.attr('name');
+            var _comboname = element.attr('comboname');
+            var _span = null;
+            if (_name) {
+                if (_type == "text") {
+                    var _class = element.attr('class');
+                    if (_class != 'combo-value') {
+                        _span = element.next("span.edit_word");
+                        if (_span) {
+                            _span.html(element.val());
+                        }
+                    }
+                }
+            }
+            if (_comboname) {
+                var comboText = element.combo("getText");
+                _span = element.parent().find("span.edit_word").first();
+                if (_span) {
+                    _span.html(comboText);
+                }
+            }
+        });
+        var textareaSelector = $('#' + formID + ' textarea');
+        $.each(textareaSelector, function (index, object) {
+            var element = $(object);
+            var _name = element.attr('name');
+            if (_name) {
+                _span = element.next("span.edit_word");
+                if (_span) {
+                    var spanHtml = element.val();
+                    spanHtml = spanHtml.replace(/\n/g, "<br>");
+                    _span.html(spanHtml);
+                }
+            }
+        });
+    }
+
+
+    function beforeSubmit() {
+        alert("beforeSubmit");
+        return true;
+    }
+
+    function ryzpSubmitSuccess() {
+        alert("人员照片保存完成回到原页面事件！");
+    }
+
+    function destroyTopWindow() {
+        try {
+            window.top.destroyWindow('www');
+        }
+        catch (err) {
+        }
+    }
+
+    // 页面加载完成事件
+    window.onload = function () {
+        bodyOnload();
+        destroyTopWindow();
+    };
+
+    // 页面退出事件
+    window.onbeforeunload = function () {
+        destroyTopWindow();
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+//reset float
+//-------------------------------
+
+@mixin reset-float($display: block){
+    float: none;
+    display: $display;
+}

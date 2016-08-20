@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+//text-overflow
+//--------------------------
+@mixin text-overflow($substract:0){//`$substract`单位为%
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width:100% - $substract;
+}
+
+%text-overflow{
+    @include text-overflow;
+}

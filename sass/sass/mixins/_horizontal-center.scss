@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+//horizontal-center  水平居中
+//---------------------------------
+
+//单个元素水平居中
+@mixin horizontal-center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//多个元素水平居中代码合并
+%horizontal-center{
+    @include horizontal-center;
+}
+
+//垂直居中 text
+@mixin text-vertical-center($var){
+    height:$var;
+    line-height: $var;
+}
+
+//垂直居中 div
+@mixin div-vertical-center{
+    position: absolute;
+    top:50%;
+}
+
+%div-vertical-center{
+    @include div-vertical-center;
+}

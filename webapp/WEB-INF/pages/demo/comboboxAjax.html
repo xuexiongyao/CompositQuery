@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../../common/easyuiDiy/easyui.css">
+    <link rel="stylesheet" href="../../../common/easyuiDiy/icon.css">
+    <link rel="stylesheet" href="../../../framework/default/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../common/datepicker/skin/christ/datepicker.css">
+    <link rel="stylesheet" href="../../../stylesheets/newItemStyle.css">
+    <script src="../../../common/easyui/jquery.min.js"></script>
+    <script src="../../../common/easyui/jquery.dragsort-0.5.2.js"></script>
+    <script src="../../../common/easyui/jquery.easyui.min.js"></script>
+    <script src="../../../common/easyui/locale/easyui-lang-zh_CN.js"></script>
+    <script src="../../../common/easyui/jquery.easyui.extend.js"></script>
+    <script src="../../../common/easyui/jquery.easyui.extend.validatebox.js"></script>
+    <script src="../../../common/easyui/jquery.easyui.extend.tabs.js"></script>
+    <script src="../../../common/easyui/jquery.form.js"></script>
+    <script src="../../../common/js/tools.js"></script>
+    <script src="../../../common/js/business.tools.js"></script>
+    <script src="../../../common/js/windowTopPage.js"></script>
+    <script src="../../../common/js/messenger.js"></script>
+    <script src="../../../common/js/common.js"></script>
+    <script src="../../../common/js/ajax.js"></script>
+    <script src="../../../common/datepicker/WdatePicker.js"></script>
+</head>
+<body style="margin: 50px;">
+
+<div class="container">
+    <!--组件样式 2:2-->
+    <h2>Item Style Button 1/1</h2>
+    <ul class="item-container">
+        <li class="item-full">
+            <p class="pro-fullThree"><i class="fa fa-asterisk"></i>性别</p>
+            <div class="ipt-fullThree">
+                <input style="width:1020px;" class="easyui-combobox" id="search" name="search"
+                       data-options="mode:'remote',
+                       method:'post',
+                       panelHeight: 'auto',
+                       panelWidth: 'auto',
+                       panelMaxHeight: 200,
+					   valueField:'id',
+					   textField:'text',
+					   selectOnNavigation:false">
+                <a href="javascript:;" class="easyui-linkbutton" onclick="getSearchID()">取值</a>
+            </div>
+        </li>
+    </ul>
+
+</div>
+
+<script type="text/javascript">
+
+    $('#search').combobox({
+        url: '../../../common/dict/xzqh.json',
+        loader: function(param, success, error) {
+            var opts = $(this).combobox('options');
+            if (!opts.url) return false;
+            if (!param.q || param.q == "") {
+                var data = [];
+                success(data);
+                return;
+            }
+            $.ajax({
+                type: opts.method,
+                url: opts.url,
+                data: param,
+                dataType: 'json',
+                success: function(data) {
+                    opts.loaded = true;
+                    success(data);
+                },
+                error: function() {
+                    console.log('err');
+                }
+            });
+        },
+        onLoadSuccess: function() {
+        },
+        filter: function(q, row) {
+            return true;
+        },
+        formatter: function(row) {
+            var opts = $(this).combobox('options');
+            if (opts.maxValueLength == 0) { // 自动调整宽度与高度
+                var data = $(this).combobox('getData');
+                var optionTextMaxLen = 0; // text的最大长度
+                for (var i = 0; i < data.length; i++){
+                    var tempRow = data[i];
+                    var sLen = getGBLength(tempRow[opts.textField]);
+                    if (sLen > optionTextMaxLen) {
+                        optionTextMaxLen = sLen;
+                    }
+                }
+                opts.maxValueLength = 1;
+                autoPanelWidth = (optionTextMaxLen + 8) * 6;
+                autoPanelWidth = autoPanelWidth < opts.width ? opts.width : autoPanelWidth;
+                var autoPanelHeight = data.length;
+                if (data.length > 10) {
+                    autoPanelHeight = 10;
+                }
+                else if (autoPanelHeight < 2) {
+                    autoPanelHeight = 2;
+                }
+                var itemHeight = 20;
+                if (IE && IE_VERSION <= 9) {
+                    itemHeight = 18;
+                }
+                $(this).combo('panel').panel('resize',{width:autoPanelWidth ,height: autoPanelHeight * itemHeight + 2});
+            }
+            return row[opts.textField];
+        },
+        loadFilter: function(data) {
+            return data;
+        }
+    });
+
+    function getSearchID() {
+        var selectID = document.getElementById('search').value;
+        alert(selectID);
+    }
+
+</script>
+<script>
+    $(function () {
+        clickShowPanel();//点击下拉框show panel
+        var window_type = 'open_url';
+
+    });
+
+</script>
+</body>
+</html>

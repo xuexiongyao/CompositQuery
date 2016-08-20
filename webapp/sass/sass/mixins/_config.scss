@@ -1,0 +1,100 @@
+@charset "utf-8";
+//-------------------------------------
+/**!
+ * @author christ
+ * 本配置基于sass框架compass,在运用时请注意是否安装sass,compass
+ */
+
+//IE判断设置
+$lte8: true !default;//是否兼容ie6-8
+$filter: false !default; //是否为ie6-8开启css3滤镜兼容，常用于渐变背景
+$printStyleSwitch: false !default; //是否开启打印样式
+$legacy-support-for-ie6: true !default;//ie6的开关判断
+$legacy-support-for-ie7: true !default;//ie7的开关判断
+$legacy-support-for-ie8: true !default;//ie8的开关判断
+$legacy-support-for-ie9: true !default;//ie9的开关判
+$legacy-support-for-ie: true !default;//ie的开关判断
+
+
+//颜色相关的配置
+//-------------------------------------
+$color:(
+    primary: #0e6595,//主色（蓝色）
+    white: #fff,//白色
+    footerBgcolor:#f4f4f4,//脚部背景
+    accordionColor:#f5f5f5,//手风琴头部
+    black: #000,//黑色
+    textColor:#5a5a5a,//文本颜色
+    gray:#999,//灰色
+    grayBgcolor:#747474,//背景灰
+    tabsBg: #edf3f5,//tabs背景
+    tabsBtnBlur:#c9c9c9,//tabs按钮默认颜色
+    pink:#ffc0cb,//粉色
+    lightQing:#b8eecf,//淡青色
+    lightBlue:#698cba,//淡蓝色
+    lightBlueBg: #9cd2e8,//淡蓝色背景
+    borderColor: #ccc,//边框颜色
+    borderFocus:#66afe9,//边框聚焦颜色
+    dashedColor:#ddd,//虚线颜色
+    inputColor:#eee,//输入框颜色
+    link: #0e6595,//超链接颜色
+    tableBgcolor: #eee,//表格背景颜色
+    tableHeadHover:#ecf4f7,//表格头部移入颜色
+    yellow: #f0ad4e,//黄色
+    green: #39980f,//绿色
+    blue:#5bc0de,//蓝色
+    red: #ed4848,//红色
+);
+
+//字体相关的配置
+//-------------------------------------
+$font-family:(
+    cn:("SinSun",宋体),//宋体
+    yh: ("Microsoft Yahei","微软雅黑"), //微软雅黑
+    ht:	"SimHei",//黑体
+    h:	(Tahoma,arial,SimSun,sans-serif),//黑体
+    en: ('Microsoft Yahei',SimSun,Tahoma,arial,SimHei,sans-serif)//英文网站
+);
+
+//字体大小相关的配置
+//-------------------------------------
+$font-size:(
+    base: 14px,//base
+    large: 18px,//large
+    small: 12px,//small
+    h1: 36px,//h1
+    h2: 30px,//h1
+    h3: 24px,//h1
+    h4: 18px,//h1
+    h5: 14px,//h1
+    h6: 12px,//h1
+);
+
+//行高相关的配置
+//-------------------------------------
+$ling-height:(
+    base: 1.428571429,//  20/14
+);
+
+
+//圆角相关的配置
+//-------------------------------------
+$radius:(
+    S: 3px,//小号
+    M: 5px,//中号
+    L: 8px,//大号
+    C: 100%,//圆形
+);
+
+//z-index
+//-------------------------------------
+$zIndex:(
+    default: 999,//默认
+    navbar: 1000,//顶部导航栏
+    dropdown: 1000,//下拉框
+    navbar-fixed: 1030,//导航栏固定
+    modal: 1050,//模态窗口
+    modal-background: 1040,//模态窗口背景
+    tooltip: 1070,//提示框
+    topest: 1100,//最顶层
+)

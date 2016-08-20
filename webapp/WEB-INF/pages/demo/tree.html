@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"><!--默认360极速模式-->
+    <title>测试验证页面主页</title>
+    <link rel="stylesheet" href="http://static.jwzh.com:7777/jwzh/common/easyuiDiy/easyui.css">
+    <link rel="stylesheet" href="http://static.jwzh.com:7777/jwzh/common/easyuiDiy/icon.css">
+    <link rel="stylesheet" href="http://static.jwzh.com:7777/jwzh/framework/default/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://static.jwzh.com:7777/jwzh/common/datepicker/skin/christ/datepicker.css">
+    <link rel="stylesheet" href="http://static.jwzh.com:7777/jwzh/stylesheets/newItemStyle.css">
+    <script src="http://static.jwzh.com:7777/jwzh/common/easyui/jquery.min.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/easyui/jquery.dragsort-0.5.2.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/easyui/jquery.easyui.min.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/easyui/locale/easyui-lang-zh_CN.js"></script>
+    <!--<script src="http://static.jwzh.com:7777/jwzh/common/easyui/jquery.easyui.extend.js"></script>-->
+    <script src="../../../common/easyui/jquery.easyui.extend.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/easyui/jquery.easyui.extend.validatebox.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/easyui/jquery.easyui.extend.tabs.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/easyui/jquery.form.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/js/tools.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/js/business.tools.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/js/windowTopPage.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/js/messenger.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/js/common.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/js/ajax.js"></script>
+    <script src="http://static.jwzh.com:7777/jwzh/common/datepicker/WdatePicker.js"></script>
+
+    <script src="../../../common/tools/tree.extend.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!--css loader-->
+        <h2>css倚赖</h2>
+        <div class="h-blank-pre-show">
+        <pre>
+            <code>
+                &lt;link rel="stylesheet" href="http://static.jwzh.com:7777/jwzh/common/easyuiDiy/easyui.css"&gt;
+                &lt;link rel="stylesheet" href="http://static.jwzh.com:7777/jwzh/common/easyuiDiy/icon.css"&gt;
+                &lt;link rel="stylesheet" href="http://static.jwzh.com:7777/jwzh/framework/default/css/font-awesome.min.css"&gt;
+                &lt;link rel="stylesheet" href="http://static.jwzh.com:7777/jwzh/common/datepicker/skin/christ/datepicker.css"&gt;
+                &lt;link rel="stylesheet" href="http://static.jwzh.com:7777/jwzh/stylesheets/newItemStyle.css"&gt;
+            </code>
+        </pre>
+        </div>
+
+        <!--js loader-->
+        <h2>js倚赖</h2>
+        <div class="h-blank-pre-show">
+        <pre>
+            <code>
+                &lt;script src="http://static.jwzh.com:7777/jwzh/common/easyui/jquery.min.js"&gt;&lt;/script&gt;
+                &lt;script src="http://static.jwzh.com:7777/jwzh/common/easyui/jquery.dragsort-0.5.2.js"&gt;&lt;/script&gt;
+                &lt;script src="http://static.jwzh.com:7777/jwzh/common/easyui/jquery.easyui.min.js"&gt;&lt;/script&gt;
+                &lt;script src="http://static.jwzh.com:7777/jwzh/common/easyui/locale/easyui-lang-zh_CN.js"&gt;&lt;/script&gt;
+                &lt;script src="http://static.jwzh.com:7777/jwzh/common/easyui/jquery.easyui.extend.js"&gt;&lt;/script&gt;
+                &lt;script src="http://static.jwzh.com:7777/jwzh/common/easyui/jquery.easyui.extend.validatebox.js"&gt;&lt;/script&gt;
+                &lt;script src="http://static.jwzh.com:7777/jwzh/common/easyui/jquery.easyui.extend.tabs.js"&gt;&lt;/script&gt;
+                &lt;script src="http://static.jwzh.com:7777/jwzh/common/easyui/jquery.form.js"&gt;&lt;/script&gt;
+                &lt;script src="http://static.jwzh.com:7777/jwzh/common/js/tools.js"&gt;&lt;/script&gt;
+                &lt;script src="http://static.jwzh.com:7777/jwzh/common/js/business.tools.js"&gt;&lt;/script&gt;
+                &lt;script src="http://static.jwzh.com:7777/jwzh/common/js/windowTopPage.js"&gt;&lt;/script&gt;
+                &lt;script src="http://static.jwzh.com:7777/jwzh/common/js/messenger.js"&gt;&lt;/script&gt;
+                &lt;script src="http://static.jwzh.com:7777/jwzh/common/js/common.js"&gt;&lt;/script&gt;
+                &lt;script src="http://static.jwzh.com:7777/jwzh/common/js/ajax.js"&gt;&lt;/script&gt;
+                &lt;script src="http://static.jwzh.com:7777/jwzh/common/datepicker/WdatePicker.js"&gt;&lt;/script&gt;
+            </code>
+        </pre>
+        </div>
+
+        <h2>树的层级判断</h2>
+        <div class="easyui-panel" style="padding:5px">
+            <ul id="tree" class="easyui-tree"></ul>
+        </div>
+
+        <div class="h-blank-pre">
+            <pre>
+                <code>
+        &lt;ul id="tree" class="easyui-tree"&gt;&lt;/ul&gt;
+
+        &lt;script&gt;
+            var treeObject = $("#tree");
+            var staticPath = 'http://static.jwzh.com:7777/jwzh';//静态资源路径
+            $(function () {
+                initTree();
+            });
+
+            //树的加载
+            function initTree() {
+                treeObject.tree({
+                    url: staticPath + '/common/dict/BD_D_CLLX.js',
+                    method: 'get',
+                    animate: true,
+                    lines: true,
+                    checkbox: true,
+                    onSelect: function (node) {
+                        var lv = treeObject.tree("getLevel", node.target);
+                        //提示
+                        $.messager.alert({
+                            title: '提示',
+                            msg: '当前层级是' + lv + '级'
+                        });
+                    }
+                })
+            }
+        &lt;/script&gt;
+
+                </code>
+            </pre>
+        </div>
+
+        <div class="h-blank-noborder"></div>
+
+        <a href="javascript:;" title="获得选中的节点"
+           class="easyui-linkbutton easyui-tooltip" onclick="getCheckedNode()">获得选中的节点</a>
+
+        <a href="javascript:;" title="获得实心节点"
+           class="easyui-linkbutton easyui-tooltip" onclick="getSolidNode()">获得实心节点</a>
+
+        <a href="javascript:;" title="只在末级节点之前显示复选框。"
+           class="easyui-linkbutton easyui-tooltip" onclick="setOnlyLeafOn()">打开 onlyLeafCheck</a>
+
+        <a href="javascript:;" title="全部显示复选框。"
+           class="easyui-linkbutton easyui-tooltip" onclick="setOnlyLeafOff()">关闭 onlyLeafCheck</a>
+
+        <a href="javascript:;" title="On Lazy Load Tree Nodes "
+           class="easyui-linkbutton easyui-tooltip" onclick="lazyLoadNodes()">启用懒加载</a>
+
+        <a href="javascript:;" title="启用拖拽"
+           class="easyui-linkbutton easyui-tooltip" onclick="startDnd()">启用拖拽</a>
+
+
+    </div>
+
+    <!--查看源代码-->
+    <div id="showCode"
+         style="position: fixed;right: 10px;top: 200px;width: 60px;height: 100px;line-height: 100px;background: green;text-align: center;cursor: pointer;color: #fff;padding: 0 10px">
+        查看源代码
+    </div>
+
+    <!--返回主页-->
+    <a id="backHome" href="http://static.jwzh.com:7777/jwzh/WEB-INF/pages/demo/index.html"
+       style="position: fixed;right: 10px;top: 320px;width: 60px;height: 100px;line-height: 100px;background: green;text-align: center;cursor: pointer;color: #fff;padding: 0 10px;text-decoration: none;">
+        返回主页
+    </a>
+
+    <script>
+        var window_type = 'open_url';
+        var treeObject = $("#tree");
+
+//        var staticPath = 'http://static.jwzh.com:7777/jwzh';//静态资源路径
+        var staticPath = '../../..';//静态资源路径
+
+        $(function () {
+            showCode();
+
+            initTree();
+        });
+
+        //表单提交
+        function formUpdate(){
+            $('#dataform').form({
+                onSubmit: function () {
+                    //选中实心节点
+                    var slidNode = treeObject.tree('getSolidExt');
+                    console.log(slidNode);
+
+                    /*选中所有节点*/
+                    var checkNode = treeObject.tree('getCheckedExt');
+                    var data = [];
+                    for(var i=0;i<checkNode.length;i++){
+                        var ids = checkNode[i].id;
+                        data.push(ids);
+                        data.remove(undefined); //删除父级节点
+                    }
+                    //console.log(data);
+
+                    return $(this).form('validate');
+                },
+                success: function (data) {
+//                    console.log(data);
+                }
+            });
+        }
+
+        //树的加载
+        function initTree(){
+            treeObject.tree({
+                url: staticPath + '/common/dict/BD_D_CLLX.js',
+                method:'get',
+                animate:true,
+                lines:false,
+                checkbox:true,
+                formatter:function(node){
+                    var s = node.text;
+                    if (node.children){
+                        s += '◢';
+                    }
+                    return s;
+                },
+                onSelect: function (node) {
+                    var lv =  treeObject.tree("getLevel",node.target);
+                    //提示
+//                    $.messager.show({
+//                        title: '提示',
+//                        msg: '当前层级是'+lv+'级'
+//                    });
+//                    $(this).tree('check',node.target);
+
+                    var nodeText = node.text;
+                    console.log(nodeText)
+                    nodeText = nodeText.replace("◢", "");
+                    treeObject.tree('update', {
+                        target: node.target,
+                        text: nodeText
+                    });
+                }
+            });
+
+
+        }
+
+        //获得选中节点(子节点)
+        function getCheckedNode(){
+            var solids = treeObject.tree("getCheckedExt");
+            var nodes = [];
+            $.each(solids,function(){
+                nodes.push(this.text);
+                nodes.remove(undefined);//移除undefined
+            });
+            $.messager.show({
+                title:'选择的节点是',
+                msg: nodes.join(",")
+            });
+        }
+
+        //获得实心节点(父级节点)
+        function getSolidNode(){
+            var solids = treeObject.tree("getSolidExt");
+            var nodes = [];
+            $.each(solids,function(){
+                nodes.push(this.target.innerText);
+            });
+            $.messager.show({
+                title:'选择的实心节点是',
+                msg: nodes.join(",")
+            });
+        }
+
+        //onlyLeafCheck true
+        function setOnlyLeafOn(){
+            treeObject.tree({
+                onlyLeafCheck:true
+            })
+        }
+
+        //onlyLeafCheck false
+        function setOnlyLeafOff(){
+            treeObject.tree({
+                onlyLeafCheck:false
+            })
+        }
+
+        //启用 lazy load
+        function lazyLoadNodes(){
+            treeObject.tree({
+                loadFilter:myLoadFilter
+            });
+
+            function myLoadFilter(data, parent){
+                var state = $.data(this, 'tree');
+
+                function setData(){
+                    var serno = 1;
+                    var todo = [];
+                    for(var i=0; i<data.length; i++){
+                        todo.push(data[i]);
+                    }
+                    while(todo.length){
+                        var node = todo.shift();
+                        if (node.id == undefined){
+                            node.id = '_node_' + (serno++);
+                        }
+                        if (node.children){
+                            node.state = 'closed';
+                            node.children1 = node.children;
+                            node.children = undefined;
+                            todo = todo.concat(node.children1);
+                        }
+                    }
+                    state.tdata = data;
+                }
+                function find(id){
+                    var data = state.tdata;
+                    var cc = [data];
+                    while(cc.length){
+                        var c = cc.shift();
+                        for(var i=0; i<c.length; i++){
+                            var node = c[i];
+                            if (node.id == id){
+                                return node;
+                            } else if (node.children1){
+                                cc.push(node.children1);
+                            }
+                        }
+                    }
+                    return null;
+                }
+
+                setData();
+
+                var t = $(this);
+                var opts = t.tree('options');
+                opts.onBeforeExpand = function(node){
+                    var n = find(node.id);
+                    if (n.children && n.children.length){return}
+                    if (n.children1){
+                        var filter = opts.loadFilter;
+                        opts.loadFilter = function(data){return data;};
+                        t.tree('append',{
+                            parent:node.target,
+                            data:n.children1
+                        });
+                        opts.loadFilter = filter;
+                        n.children = n.children1;
+                    }
+                };
+                return data;
+            }
+        }
+        //
+        function startDnd(){
+            treeObject.tree({
+                dnd:true
+            });
+        }
+
+        //查看源代码
+        function showCode() {
+            $("#showCode").off('click').on('click', function () {
+                $(".h-blank-pre").slideToggle();
+            })
+        }
+    </script>
+
+</body>
+</html>

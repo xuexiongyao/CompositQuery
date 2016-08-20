@@ -1,0 +1,157 @@
+@charset "utf-8";
+body{
+    @include attrMarginPadding(10px);
+    font-family:fontFamily(yh);
+    color: colors(textColor);
+}
+.container{
+    margin:0 auto;
+    width:1200px;
+    height:auto;
+    //ul item-container
+    .item-container{
+        list-style-type: none;
+        @include attrMarginPaddingBorder;
+        @include square(auto);
+        @include clearfix;
+        li{
+            float: left;
+            @include clearfix;
+            margin-bottom:10px;
+            >p{
+                @include attrMarginPaddingBorder;
+                @include float(left);
+                @include text-align(right);
+                @include text-vertical-center(24px);
+                font-weight:bold;
+                i{
+                    color: colors(red);
+                    margin-right:3px;
+                }
+            }
+            .pro{
+                width: 30%;
+            }
+            .pro-twoThree{
+                width:20%;
+            }
+            .pro-fullTwo{
+                width:15%;
+            }
+            .pro-fullThree{
+                width:10%;
+            }
+            >div{
+                @include float(right);
+                line-height:2;
+                >label{
+                    cursor: pointer;
+                    margin-right:10px;
+                    input{
+                        vertical-align: -2px;
+                    }
+                    input[type="checkbox"]{
+                        margin-left:0;
+                    }
+                }
+                >a{
+                    display: inline-block;
+                    @include text-vertical-center(20px);
+                    span{
+                        @include text-vertical-center(20px);
+                        i{
+                            line-height:20px;
+                        }
+                    }
+                }
+                >textarea{
+                    @include border(1px,solid,colors(borderColor));
+                    @include prefix(border,radius,3px);
+                    outline: none;
+                    text-indent: 5px;
+                    resize: none;
+                    &:focus{
+                        border-color: colors(borderFocus);
+                        @include box-shadow(0 0 3px 0 colors(borderFocus));
+                    }
+                }
+            }
+            .ipt{
+                width:68%;
+            }
+            .ipt-fullTwo{
+                width:84%;
+            }
+            .ipt-twoThree{
+                width:78.6666%;
+            }
+            .ipt-fullThree{
+                width:89.3333%;
+            }
+        }
+        .item-full{//一行一个
+            width:100%;
+        }
+        .item-two{//一行两个个
+            width:50%;
+        }
+        .item-three{//一行三个个
+            width:33.3333%;
+        }
+    }
+    .btn-area{
+        width:100%;
+        margin-top:30px;
+        text-align: center;
+    }
+    .h-blank{
+        display: block;
+        @include size(100%,auto);
+        padding-bottom:7px;
+        border-bottom: 1px dashed #000;
+        span{
+            font-weight:bold;
+            //padding-left:10px;
+        }
+        span.title{
+            font-size: 18px;
+        }
+    }
+    .h-blank-noborder{
+        display: block;
+        @include size(100%,20px);
+    }
+    .h-blank-pre{
+        display: none;
+        @include size(100%,auto);
+        border-top: 10px solid red;
+        @include prefix(border,radius,3px);
+        background: #ededed;
+        color: #000;
+        overflow: auto;
+        font-size: fontSize(small);
+        pre,code{
+            font-family:fontFamily(yh);
+        }
+    }
+    .h-blank-pre-show{
+        @include size(100%,auto);
+        background: colors(black);
+        color:colors(white);
+        font-size: fontSize(small);
+        pre,code{
+            font-family:fontFamily(yh);
+        }
+    }
+}
+
+label{
+    cursor: pointer;
+    margin-right:10px;
+    input{
+        vertical-align: -2px;
+    }
+    input[type="checkbox"]{
+        margin-left:0;
+    }
+}

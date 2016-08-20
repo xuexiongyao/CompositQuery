@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+/****************公共页面基本框架样式**********************/
+
+body {
+    background: url("../framework/default/images/general_bg.jpg");
+    visibility: hidden;
+}
+textarea{
+    overflow: auto;
+    resize: none;
+    outline: none;
+    @include prefix(border,radius,3px);
+    border-color:colors(borderColor);
+}
+label{
+    cursor : pointer;
+}
+.main{
+    margin: 30px auto 0;
+    padding: 1px 0 30px;
+    width: 1198px;
+    height:auto;
+    //@include border(1px,solid,colors(borderColor));
+    background-color: colors(white);
+}
+.content-area{
+    width : 1100px;
+    margin: 40px auto 0;
+    @include text-align(center);
+    @include clearfix;
+    font-size: fontSize(base);
+    .item{
+        margin: 0 20px 10px;
+        width:510px;
+        line-height:22px;
+        @include float(left);
+        textarea{
+            height:60px;
+        }
+        a{
+            @include float(left);
+        }
+        .control-btn{
+            @include float(right);
+            margin-right:3px;
+            i{
+                line-height:20px;
+            }
+        }
+        @include clearfix;
+    }
+    .item-full{
+        width:1060px;
+    }
+    .item-title{
+        margin: 0 0 20px;
+        padding-bottom:5px;
+        width:100%;
+        border-bottom:1px solid colors(borderColor);
+        .pro{
+            width:100%;
+            margin:0;
+            font-size: fontSize(large);
+            @include text-align(left);
+        }
+    }
+    .pro{
+        @include inline-block(top);
+        width:150px;
+        @include text-align(right);
+        margin-right:20px;
+        color:colors(textColor);
+        font-weight:bold;
+        @include float(left);
+        i{
+            color: colors(red);
+            margin-right:5px;
+        }
+    }
+    //input radio
+    .radio-box{
+        text-align: left;
+        input{
+            vertical-align: -2px;
+        }
+    }
+}
+.btn-area{
+    width : 1100px;
+    margin: 40px auto 0;
+    @include text-align(center);
+    font-size: fontSize(base);
+    a.easyui-linkbutton{
+        margin:0 10px;
+    }
+}
+.clear{
+    clear:both;
+}
+
+//easyui组件只读 无边框
+.clear-border{border: 1px solid colors(white);}
+
+//全局蒙层
+#loadingMsk {
+    font-family: "SimSun";
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    @include square(100%);
+    .loadingPage {
+        background: colors(white);
+        text-align: center;
+        @include size(300px,100px);
+        line-height: 100px;
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+        top: 50%;
+        margin-top: -50px;
+        img {
+            @include inline-block;
+        }
+        span{
+            margin-left:10px;
+            @include text-overflow;
+        }
+    }
+}

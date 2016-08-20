@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+//Browser Prefix
+//----------------------------
+
+//border-radius
+@mixin prefix($attr1,$attr2,$val:5px){
+    #{$attr1}-#{$attr2}: $val;
+    -webkit-#{$attr1}-#{$attr2}: $val;
+    -moz-#{$attr1}-#{$attr2}: $val;
+    -o-#{$attr1}-#{$attr2}: $val;
+    -ms-#{$attr1}-#{$attr2}: $val;
+}
+
+@mixin prefix-all-round($attr1,$attr2,$val1,$val2,$val3,$val4){
+    #{$attr1}-#{$attr2}: $val1 $val2 $val3 $val4;
+    -webkit-#{$attr1}-#{$attr2}: $val1 $val2 $val3 $val4;
+    -moz-#{$attr1}-#{$attr2}: $val1 $val2 $val3 $val4;
+    -o-#{$attr1}-#{$attr2}: $val1 $val2 $val3 $val4;
+    -ms-#{$attr1}-#{$attr2}: $val1 $val2 $val3 $val4;
+}

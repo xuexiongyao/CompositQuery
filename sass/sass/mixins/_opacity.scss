@@ -1,0 +1,23 @@
+//Opacity
+
+@mixin opacity($opacity){
+    opacity: $opacity;
+    // IE8 filter
+    $opacity-ie: ($opacity * 100);
+    filter: alpha(opacity=$opacity-ie);
+}
+// Make an element completely transparent.
+@mixin transparent {
+    @include opacity(0);
+}
+%transparent{
+    @include opacity(0);
+}
+// Make an element completely opaque.
+@mixin opaque {
+    @include opacity(1);
+}
+
+%opaque{
+    @include opacity(1);
+}

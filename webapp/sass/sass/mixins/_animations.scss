@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+//animate
+//------------------------------
+
+/*按钮移入渐变*/
+@mixin btnIn{
+    @keyframes btnDefault {
+        from{
+            color: colors(white);
+            background: colors(primary);
+        }
+        to{
+            color: colors(primary);
+            background: colors(white);
+        }
+    }
+    @-webkit-keyframes btnDefault {
+        from{
+            color: colors(white);
+            background: colors(primary);
+        }
+        to{
+            color: colors(primary);
+            background: colors(white);
+        }
+    }
+    @-moz-keyframes btnDefault {
+        from{
+            color: colors(white);
+            background: colors(primary);
+        }
+        to{
+            color: colors(primary);
+            background: colors(white);
+        }
+    }
+    @-o-keyframes btnDefault {
+        from{
+            color: colors(white);
+            background: colors(primary);
+        }
+        to{
+            color: colors(primary);
+            background: colors(white);
+        }
+    }
+}
+
+@mixin btnOut{
+    @keyframes btnHover {
+        from{
+            color: colors(primary);
+            background: colors(white);
+        }
+        to{
+            color: colors(white);
+            background: colors(primary);
+        }
+    }
+    @-webkit-keyframes btnHover {
+        from{
+            color: colors(primary);
+            background: colors(white);
+        }
+        to{
+            color: colors(white);
+            background: colors(primary);
+        }
+    }
+    @-moz-keyframes btnHover {
+        from{
+            color: colors(primary);
+            background: colors(white);
+        }
+        to{
+            color: colors(white);
+            background: colors(primary);
+        }
+    }
+    @-o-keyframes btnHover {
+        from{
+            color: colors(primary);
+            background: colors(white);
+        }
+        to{
+            color: colors(white);
+            background: colors(primary);
+        }
+    }
+}
+
+/*disabled btn*/
+@mixin disableBtn{
+    @keyframes disNoneAnimation {
+        from{}
+        to{}
+    }
+    @-webkit-keyframes disNoneAnimation {
+        from{}
+        to{}
+    }
+    @-moz-keyframes disNoneAnimation {
+        from{}
+        to{}
+    }
+    @-o-keyframes disNoneAnimation {
+        from{}
+        to{}
+    }
+}
+
+/*selected button*/
+@mixin selectedBtn{
+    @keyframes selectedBtn {
+        from{}
+        to{}
+    }
+    @-webkit-keyframes selectedBtn {
+        from{}
+        to{}
+    }
+    @-moz-keyframes selectedBtn {
+        from{}
+        to{}
+    }
+    @-o-keyframes selectedBtn {
+        from{}
+        to{}
+    }
+}
